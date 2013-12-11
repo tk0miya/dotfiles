@@ -21,7 +21,7 @@ echo "Setup python environments ..."
 if [ ! -d $HOME/bin/python ]; then
     virtualenv $HOME/bin/python
 fi
-$HOME/bin/python/bin/pip install --upgrade pip mercurial detox flake8
+$HOME/bin/python/bin/pip install --upgrade pip mercurial detox flake8 hub
 
 echo ""
 echo "Creating dotfile symlinks ..."
