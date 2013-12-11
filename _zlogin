@@ -1,0 +1,36 @@
+if [ -x /usr/bin/keychain ]; then
+    /usr/bin/keychain -q `ls ~/.ssh/id_* | grep -v \.pub`
+    source ~/.keychain/$HOST-sh
+
+    if [ $TERM != "screen" ]; then
+        exec screen -S main -xRR
+    fi
+else
+    # For MacOSX
+    if [ -d /System ]; then
+        if [ -z $SSH_AUTH_SOCK ]; then
+            if [ -e $HOME/.ssh/auth_sock ]; then
+                export SSH_AUTH_SOCK=$HOME/.ssh/auth_sock
+            else
+                eval `ssh-agent -a $HOME/.ssh/auth_sock`
+                ssh-add
+            fi
+        fi
+    else
+        isAlive=`ps -xw | grep " ssh-agent "| grep -v grep | wc -l | sed -e 's/[^0-9]//g' `
+        case ${isAlive} in
+            0)
+                ssh-agent -s >! ~/.ssh-agent-info
+                source ~/.ssh-agent-info
+                ssh-add ~/.ssh/id_rsa
+                ;;
+            *)
+                source ~/.ssh-agent-info
+                ;;
+        esac
+
+        if [ $TERM != "screen" ]; then
+            exec screen -S main -xRR
+        fi
+    fi
+fi

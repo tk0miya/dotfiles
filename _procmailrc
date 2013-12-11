@@ -1,0 +1,153 @@
+MAILDIR=$HOME/.maildir/
+DEFAULT=$MAILDIR
+LOCKFILE=$MAILDIR/lock
+
+######################
+#
+# MTA Error mails.
+
+:0
+* Subject: Returned mail.*
+palm/err.mbox
+
+# SPAMs.
+
+:0 fw
+| bsfilter --auto-update --pipe --insert-flag --insert-probability
+
+:0
+* ^X-Spam-Flag: Yes
+/dev/null
+
+######################
+#
+# Linux MailingLists.
+
+:0
+* List-Id: linux-users <linux-users.listserv.linux.or.jp>
+palm/linux.mbox
+
+:0
+* X-ML-Name: debian-devel
+* Subject: .* Unanswered problem reports by .*
+/dev/null
+
+:0
+* X-ML-Name: debian-(users|devel)
+palm/debian.mbox
+
+:0
+* X-ML-Name: debian-announce
+palm/debian.mbox
+
+######################
+#
+# Programming MailingLists.
+
+:0
+* X-ML-Name: ruby-(list|dev|ext)
+palm/ruby.mbox
+
+:0
+* X-ML-Name: modruby-ja
+palm/ruby.mbox
+
+:0
+* X-ML-Name: rails@ruby
+palm/rails.mbox
+
+:0
+* X-Ml-Name: perl
+palm/development.mbox
+
+:0
+* Reply-To: shibuya-pm@p5ee.net
+palm/development.mbox
+
+:0
+* Mailing-List: contact jcode5-help@ring.gr.jp; run by ezmlm
+palm/development.mbox
+
+:0
+* X-ML-Name: extremeprogramming-jp
+palm/development.mbox
+
+:0
+* X-ML-Name: refactoring-jp
+palm/development.mbox
+
+:0
+* List-Post: <mailto:oosquare-ml@ml.ogis-ri.co.jp>
+palm/development.mbox
+
+:0
+* X-ML-Name: agile-jp
+palm/development.mbox
+
+:0
+* X-Ml-Name: patterns
+palm/development.mbox
+
+:0
+* List-Id: <legacy-encoding-talk-ja.lists.sourceforge.jp>
+palm/development.mbox
+
+:0
+* List-Id: PHP-users ML <php-users.php.gr.jp>
+palm/development.mbox
+
+######################
+#
+# Security MailingLists.
+
+:0
+* X-Ml-Name: seasurfers
+palm/security.mbox
+
+:0
+* X-ML-Name: memo
+palm/security.mbox
+
+######################
+#
+# Utilities MailingLists.
+
+:0
+* X-ML-Name: jcug-public
+palm/misc.mbox
+
+:0
+* List-Id: <namazu-devel-ja.namazu.org>
+palm/misc.mbox
+
+:0
+* List-Id: <namazu-users-ja.namazu.org>
+palm/misc.mbox
+
+:0
+* List-Id: <namazu-win32-users-ja.namazu.org>
+palm/misc.mbox
+
+######################
+#
+# Misc. MailingLists.
+
+:0
+* X-(Ml|ML)-Name: palm-.*
+palm/misc.mbox
+
+:0
+* Reply-To: regexp@bug.org
+palm/misc.mbox
+
+:0
+* List-Post: <mailto:plone-users@ml.plone.jp>
+palm/plone.mbox
+
+######################
+#
+# statistics report
+
+:0
+* Subject: Cron.*auto-apt
+/dev/null
