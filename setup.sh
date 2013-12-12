@@ -17,6 +17,14 @@ else
 fi
 
 echo ""
+echo "Setup $HOME/bin ..."
+if [ ! -d $HOME/bin ]; then
+    mkdir -p $HOME/bin
+fi
+curl -s -o $HOME/bin/diff-highlight https://raw.github.com/git/git/master/contrib/diff-highlight/diff-highlight
+chmod +x $HOME/bin/diff-highlight
+
+echo ""
 echo "Setup python environments ..."
 if [ ! -d $HOME/bin/python ]; then
     virtualenv $HOME/bin/python
