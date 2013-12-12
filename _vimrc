@@ -8,8 +8,8 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " add plugins
-NeoBundle 'alfredodeza/khuno.vim'
-NeoBundle 'Townk/vim-autoclose'
+NeoBundle 'alfredodeza/khuno.vim'  " Lint with flake8
+NeoBundle 'Townk/vim-autoclose'    " Close quotations automatically
 
 filetype plugin on
 
