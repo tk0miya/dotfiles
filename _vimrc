@@ -11,6 +11,11 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'alfredodeza/khuno.vim'  " Lint with flake8
 NeoBundle 'Townk/vim-autoclose'    " Close quotations automatically
 
+" search highlights
+set hlsearch
+nmap <Esc><Esc> :nohlsearch<CR><Esc>  " turn off highlights
+
+
 filetype plugin on
 
 NeoBundleCheck
