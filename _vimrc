@@ -14,9 +14,25 @@ NeoBundle 'kana/vim-smartword'     " Cursor moving helper
 
 " search highlights
 set hlsearch
-nmap <Esc><Esc> :nohlsearch<CR><Esc>  " turn off highlights
+nmap <Esc><Esc> :nohlsearch<CR><Esc>  " turn off highlight
 
-" key mappings
+" key mappings (moves)
+" - Move cursor by display line
+vnoremap j gj
+vnoremap k gk
+noremap j gj
+noremap k gk
+" Enable C-a, C-e (like Emacs)
+nnoremap <C-a> ^
+nnoremap <C-e> $
+" - Do centering after search
+nmap n nzz
+nmap N Nzz
+nmap * *zz
+nmap # #zz
+nmap g* g*zz
+nmap g# g#zz
+" - replace smartword mover
 map w <Plug>(smartword-w)
 map b <Plug>(smartword-b)
 map e <Plug>(smartword-e)
