@@ -9,6 +9,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " add plugins
 NeoBundle 'alfredodeza/khuno.vim'
+NeoBundle 'Townk/vim-autoclose'
 
 filetype plugin on
 
