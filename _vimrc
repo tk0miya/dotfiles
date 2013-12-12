@@ -8,6 +8,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " add plugins
+NeoBundle 'alfredodeza/khuno.vim'
 
 filetype plugin on
 
