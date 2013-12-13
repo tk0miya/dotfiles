@@ -18,6 +18,13 @@ set hlsearch
 " - turn off highlight
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
+" highlight Zenkaku spaces
+augroup highlightDoubleByteSpace
+  autocmd!
+  autocmd VimEnter,Colorscheme * highlight DoubleByteSpace term=underline ctermbg=Red guibg=Red
+  autocmd VimEnter,WinEnter,BufRead * match DoubleByteSpace /　/
+augroup END
+
 " basic settings
 set smarttab                        " Expand <TAB>
 set expandtab                       " Expand <TAB> to multiple spaces (see tabstop)
