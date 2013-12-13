@@ -13,11 +13,6 @@ NeoBundle 'Townk/vim-autoclose'     " Close quotations automatically
 NeoBundle 'nanotech/jellybeans.vim' " Colorscheme
 NeoBundle 'w0ng/vim-hybrid'         " Colorscheme
 
-" search highlights
-set hlsearch
-" - turn off highlight
-nmap <Esc><Esc> :nohlsearch<CR><Esc>
-
 " highlight Zenkaku spaces
 augroup highlightDoubleByteSpace
   autocmd!
@@ -33,6 +28,7 @@ set shiftwidth=4                    " Length of auto-indentation
 set incsearch                       " Do incremental search
 set ignorecase                      " Case insensitive search as default
 set smartcase                       " Case sensitive search if pattern contains CAPITAL chars
+set hlsearch                        " Highlight search results
 set list                            " Display invisible characters
 set listchars=tab:>.,trail:_        " Display <TAB> as '>', trail spaces as '_'
 set wildmenu                        " Show wildmenu on completion
@@ -53,9 +49,11 @@ vnoremap j gj
 vnoremap k gk
 noremap j gj
 noremap k gk
-" Enable C-a, C-e (like Emacs)
+" - Enable C-a, C-e (like Emacs)
 nnoremap <C-a> ^
 nnoremap <C-e> $
+" - turn off highlights
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
 " - Do centering after search
 nmap n nzz
 nmap N Nzz
