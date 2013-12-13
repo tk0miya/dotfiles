@@ -8,9 +8,11 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " add plugins
-NeoBundle 'alfredodeza/khuno.vim'  " Lint with flake8
-NeoBundle 'Townk/vim-autoclose'    " Close quotations automatically
-NeoBundle 'kana/vim-smartword'     " Cursor moving helper
+NeoBundle 'alfredodeza/khuno.vim'   " Lint with flake8
+NeoBundle 'Townk/vim-autoclose'     " Close quotations automatically
+NeoBundle 'kana/vim-smartword'      " Cursor moving helper
+NeoBundle 'nanotech/jellybeans.vim' " Colorscheme
+NeoBundle 'w0ng/vim-hybrid'         " Colorscheme
 
 " search highlights
 set hlsearch
@@ -37,6 +39,10 @@ map w <Plug>(smartword-w)
 map b <Plug>(smartword-b)
 map e <Plug>(smartword-e)
 map ge <Plug>(smartword-ge)
+
+" Enable colorscheme
+colorscheme jellybeans
+syntax on
 
 filetype plugin on
 
