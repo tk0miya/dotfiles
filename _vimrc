@@ -37,6 +37,7 @@ set ambiwidth=double                " Use twice width to some special characters
 set formatoptions+=mM               " Do not insert spaces when join japanese lines
 set display+=lastline               " Display last line in a window possibly
 set lazyredraw                      " Do not redraw while executing macros, registers and so on
+set ruler                           " Show position of cursor in status line
 set showcmd                         " Show command in status line
 set cursorline                      " Show cursor line
 set autoread                        " Auto reload file if buffer is not changed
@@ -68,5 +69,9 @@ syntax on
 
 filetype plugin on
 filetype plugin indent on
+
+" Do not treat new line as comment
+" (this setting should be enable after filetype plugin)
+autocmd Filetype * set formatoptions-=ro
 
 NeoBundleCheck
