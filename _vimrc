@@ -62,6 +62,11 @@ nmap # #zz
 nmap g* g*zz
 nmap g# g#zz
 
+" Enable 256 colors FORCELY on screen
+if $TERM == 'screen'
+    set t_Co=256
+endif
+
 " Enable colorscheme
 colorscheme jellybeans
 syntax on
