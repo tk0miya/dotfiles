@@ -9,7 +9,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " add plugins
 NeoBundle 'alfredodeza/khuno.vim'   " Lint with flake8
-NeoBundle 'Townk/vim-autoclose'     " Close quotations automatically
 NeoBundle 'nanotech/jellybeans.vim' " Colorscheme
 NeoBundle 'w0ng/vim-hybrid'         " Colorscheme
 
