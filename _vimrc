@@ -9,6 +9,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " add plugins
 NeoBundle 'alfredodeza/khuno.vim'   " Lint with flake8
+NeoBundle 'itchyny/lightline.vim'   " Customize status line
 NeoBundle 'nanotech/jellybeans.vim' " Colorscheme
 NeoBundle 'w0ng/vim-hybrid'         " Colorscheme
 
@@ -36,6 +37,7 @@ set ambiwidth=double                " Use twice width to some special characters
 set formatoptions+=mM               " Do not insert spaces when join japanese lines
 set display+=lastline               " Display last line in a window possibly
 set lazyredraw                      " Do not redraw while executing macros, registers and so on
+set laststatus=2                    " Show status line always
 set ruler                           " Show position of cursor in status line
 set showcmd                         " Show command in status line
 set cursorline                      " Show cursor line
