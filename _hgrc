@@ -13,7 +13,7 @@ histedit =
 hgbb = $HOME/.hgext/hgbb/hgbb.py
 
 [pager]
-pager = LESS='FRX' less
+pager = diff-highlight | LESS='FRX' less
 quiet = True
 attend = annotate, cat, diff, export, glog, log, qdiff
 
