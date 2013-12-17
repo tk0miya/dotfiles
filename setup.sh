@@ -7,6 +7,11 @@ if [ -d _hgext/hgbb ]; then
 else
     (cd _hgext && hg clone https://bitbucket.org/birkenfeld/hgbb)
 fi
+if [ -d _hgext/hg-diff-highlight ]; then
+    (cd _hgext/hg-diff-highlight && hg update)
+else
+    (cd _hgext && hg clone https://bitbucket.org/tk0miya/hg-diff-highlight)
+fi
 
 echo ""
 echo "Setup vim extensions ..."

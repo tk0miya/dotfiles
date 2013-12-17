@@ -11,9 +11,10 @@ pager =
 shelve =
 histedit =
 hgbb = $HOME/.hgext/hgbb/hgbb.py
+diff-highlight = $HOME/.hgext/hg-diff-highlight/diff-highlight.py
 
 [pager]
-pager = diff-highlight | LESS='FRX' less
+pager = LESS='FRX' less
 quiet = True
 attend = annotate, cat, diff, export, glog, log, qdiff
 
