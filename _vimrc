@@ -55,7 +55,7 @@ noremap k gk
 nnoremap <C-a> ^
 nnoremap <C-e> $
 " - turn off highlights
-nmap <Esc><Esc> :nohlsearch<CR><Esc>
+nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
 " - Do centering after search
 nmap n nzz
 nmap N Nzz
