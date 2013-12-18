@@ -1,6 +1,7 @@
 [ui]
 username = tk0miya <i.tkomiya@gmail.com>
 ssh = ssh -C
+editor = vim
 
 [extensions]
 color =
