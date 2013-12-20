@@ -12,7 +12,7 @@ pager =
 shelve =
 histedit =
 hgbb = $HOME/.hgext/hgbb/hgbb.py
-diff-highlight = $HOME/.hgext/hg-diff-highlight/diff-highlight.py
+diff_highlight =
 
 [pager]
 pager = LESS='FRX' less

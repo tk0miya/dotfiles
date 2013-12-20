@@ -7,11 +7,6 @@ if [ -d _hgext/hgbb ]; then
 else
     (cd _hgext && hg clone https://bitbucket.org/birkenfeld/hgbb)
 fi
-if [ -d _hgext/hg-diff-highlight ]; then
-    (cd _hgext/hg-diff-highlight && hg update)
-else
-    (cd _hgext && hg clone https://bitbucket.org/tk0miya/hg-diff-highlight)
-fi
 
 echo ""
 echo "Setup vim extensions ..."
@@ -34,7 +29,7 @@ echo "Setup python environments ..."
 if [ ! -d $HOME/bin/python ]; then
     virtualenv $HOME/bin/python
 fi
-$HOME/bin/python/bin/pip install --upgrade pip mercurial detox flake8 hub
+$HOME/bin/python/bin/pip install --upgrade pip mercurial detox flake8 hub diff-highlight
 
 echo ""
 echo "Creating dotfile symlinks ..."
