@@ -29,6 +29,7 @@ set shiftwidth=4                    " Length of auto-indentation
 set incsearch                       " Do incremental search
 set ignorecase                      " Case insensitive search as default
 set smartcase                       " Case sensitive search if pattern contains CAPITAL chars
+set infercase                       " Case insensitive completion
 set hlsearch                        " Highlight search results
 set list                            " Display invisible characters
 set listchars=tab:>.,trail:_        " Display <TAB> as '>', trail spaces as '_'
