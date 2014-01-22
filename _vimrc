@@ -8,10 +8,11 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " add plugins
-NeoBundle 'alfredodeza/khuno.vim'   " Lint with flake8
-NeoBundle 'itchyny/lightline.vim'   " Customize status line
-NeoBundle 'nanotech/jellybeans.vim' " Colorscheme
-NeoBundle 'w0ng/vim-hybrid'         " Colorscheme
+NeoBundle 'alfredodeza/khuno.vim'        " Lint with flake8
+NeoBundle 'hynek/vim-python-pep8-indent' " PEP8 based auto indentation
+NeoBundle 'itchyny/lightline.vim'        " Customize status line
+NeoBundle 'nanotech/jellybeans.vim'      " Colorscheme
+NeoBundle 'w0ng/vim-hybrid'              " Colorscheme
 
 " highlight Zenkaku spaces
 augroup highlightDoubleByteSpace
