@@ -1,5 +1,7 @@
 #!/bin/sh
 
+REGULAR_PYTHON_VERSION=2.7.6
+
 echo ""
 echo "Setup hg extensions ..."
 if [ -d _hgext/hgbb ]; then
@@ -34,6 +36,31 @@ for version in 1.9.3-p484 2.1.0; do
     fi
 done
 rbenv global 2.1.0
+
+echo ""
+echo "Setup pyenv ..."
+if [ -d $HOME/.pyenv ]; then
+    (cd $HOME/.pyenv && git pull)
+    (cd $HOME/.pyenv/plugins/python-virtualenv && git pull)
+else
+    git clone git://github.com/yyuu/pyenv.git $HOME/.pyenv
+    git clone git://github.com/yyuu/python-virtualenv.git $HOME/.pyenv/plugins/python-virtualenv
+
+    PATH=$HOME/.pyenv/bin:$PATH
+    eval "$(pyenv init -)"
+fi
+if [ `hostname` == "deneb" ]; then
+    for version in 2.4.6 2.5.6 2.6.9 2.7.6 3.2.5 3.3.4; do
+        if [ ! -d "$HOME/.pyenv/versions/$version" ]; then
+            pyenv install $version
+        fi
+    done
+else
+    if [ ! -d "$HOME/.pyenv/versions/$REGULAR_PYTHON_VERSION" ]; then
+        pyenv install $REGULAR_PYTHON_VERSION
+    fi
+fi
+rbenv global $REGULAR_PYTHON_VERSION
 
 echo ""
 echo "Setup $HOME/bin ..."
