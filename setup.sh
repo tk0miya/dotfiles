@@ -60,7 +60,7 @@ else
         pyenv install $REGULAR_PYTHON_VERSION
     fi
 fi
-rbenv global $REGULAR_PYTHON_VERSION
+pyenv global $REGULAR_PYTHON_VERSION
 
 echo ""
 echo "Setup $HOME/bin ..."
