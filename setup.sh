@@ -3,14 +3,6 @@
 REGULAR_PYTHON_VERSION=2.7.6
 
 echo ""
-echo "Setup hg extensions ..."
-if [ -d _hgext/hgbb ]; then
-    (cd _hgext/hgbb && hg update)
-else
-    (cd _hgext && hg clone https://bitbucket.org/birkenfeld/hgbb)
-fi
-
-echo ""
 echo "Setup vim extensions ..."
 if [ -d _vim/bundle/neobundle.vim ]; then
     (cd _vim/bundle/neobundle.vim  && git pull)
@@ -70,11 +62,16 @@ fi
 
 echo ""
 echo "Setup python environments ..."
-if [ ! -d $HOME/bin/python ]; then
-    virtualenv $HOME/bin/python
+pip install --upgrade setuptools
+pip install --upgrade pip mercurial detox flake8 hub diff-highlight
+
+echo ""
+echo "Setup hg extensions ..."
+if [ -d _hgext/hgbb ]; then
+    (cd _hgext/hgbb && hg update)
+else
+    (cd _hgext && hg clone https://bitbucket.org/birkenfeld/hgbb)
 fi
-$HOME/bin/python/bin/pip install --upgrade setuptools
-$HOME/bin/python/bin/pip install --upgrade pip mercurial detox flake8 hub diff-highlight
 
 echo ""
 echo "Creating dotfile symlinks ..."
