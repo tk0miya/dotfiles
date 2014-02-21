@@ -50,7 +50,7 @@ else
     eval "$(pyenv init -)"
 fi
 if [ `hostname` == "deneb" ]; then
-    for version in 2.4.6 2.5.6 2.6.9 2.7.6 3.2.5 3.3.4; do
+    for version in 2.5.6 2.6.9 2.7.6 3.2.5 3.3.4; do
         if [ ! -d "$HOME/.pyenv/versions/$version" ]; then
             pyenv install $version
         fi
