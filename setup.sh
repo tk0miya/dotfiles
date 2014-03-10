@@ -1,6 +1,10 @@
 #!/bin/sh
 
-REGULAR_PYTHON_VERSION=2.7.6
+if [ `hostname` == "deneb" ]; then
+    REGULAR_PYTHON_VERSIONS="2.7.6 2.5.6 2.6.9 3.2.5 3.3.4"
+else
+    REGULAR_PYTHON_VERSIONS=2.7.6
+fi
 
 echo ""
 echo "Setup vim extensions ..."
@@ -41,18 +45,12 @@ else
     PATH=$HOME/.pyenv/bin:$PATH
     eval "$(pyenv init -)"
 fi
-if [ `hostname` == "deneb" ]; then
-    for version in 2.5.6 2.6.9 2.7.6 3.2.5 3.3.4; do
-        if [ ! -d "$HOME/.pyenv/versions/$version" ]; then
-            pyenv install $version
-        fi
-    done
-else
-    if [ ! -d "$HOME/.pyenv/versions/$REGULAR_PYTHON_VERSION" ]; then
-        pyenv install $REGULAR_PYTHON_VERSION
+for version in $REGULAR_PYTHON_VERSIONS; do
+    if [ ! -d "$HOME/.pyenv/versions/$version" ]; then
+        pyenv install $version
     fi
-fi
-pyenv global $REGULAR_PYTHON_VERSION
+done
+pyenv global $REGULAR_PYTHON_VERSIONS
 
 echo ""
 echo "Setup $HOME/bin ..."
