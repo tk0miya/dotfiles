@@ -53,6 +53,27 @@ done
 pyenv global $REGULAR_PYTHON_VERSIONS
 
 echo ""
+echo "Setup plenv ..."
+if [ -d $HOME/.plenv ]; then
+    (cd $HOME/.plenv && git pull)
+    (cd $HOME/.plenv/plugins/perl-build && git pull)
+else
+    git clone https://github.com/tokuhirom/plenv $HOME/.plenv
+    git clone https://github.com/tokuhirom/Perl-Build $HOME/.plenv/plugins/perl-build
+
+    PATH=$HOME/.plenv/bin:$PATH
+    eval "$(plenv init -)"
+fi
+for version in 5.18.2; do
+    if [ ! -d "$HOME/.plenv/versions/$version" ]; then
+        plenv install $version -Dusethreads
+        plenv global $version
+        plenv install-cpanm
+    fi
+done
+plenv global 5.18.2
+
+echo ""
 echo "Setup $HOME/bin ..."
 if [ ! -d $HOME/bin ]; then
     mkdir -p $HOME/bin

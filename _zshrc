@@ -40,6 +40,11 @@ if [ -d $HOME/.pyenv ]; then
     eval "$(pyenv init -)"
 fi
 
+if [ -d $HOME/.plenv ]; then
+    PATH=$HOME/.plenv/bin:$PATH
+    eval "$(plenv init -)"
+fi
+
 if [ -d $HOME/.rvm ]; then
     PATH=$HOME/.rvm/bin:$PATH
 fi
