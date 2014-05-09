@@ -7,7 +7,10 @@ tap caskroom/homebrew-versions
 
 # packages
 install brew-cask
+install freetype
 install git
+install imagemagick
+install jpeg
 install mercurial
 install openssl
 
