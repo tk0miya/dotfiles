@@ -6,6 +6,19 @@ else
     REGULAR_PYTHON_VERSIONS=2.7.6
 fi
 
+if [ `uname -s` == "Darwin" ]; then
+    echo ""
+    echo "Setup Homebrew ..."
+    if [ -x /usr/local/bin/brew ]; then
+        (cd `brew --prefix` && git pull origin master)
+    else
+        ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+    fi
+
+    brew bundle
+    PATH=/usr/local/bin:$PATH
+fi
+
 echo ""
 echo "Setup vim extensions ..."
 if [ -d _vim/bundle/neobundle.vim ]; then
