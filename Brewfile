@@ -13,6 +13,7 @@ install imagemagick
 install jpeg
 install mercurial
 install openssl
+install vim
 
 cleanup
 
