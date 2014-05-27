@@ -45,6 +45,11 @@ if [ -d $HOME/.plenv ]; then
     eval "$(plenv init -)"
 fi
 
+if [ -d $HOME/.ndenv ]; then
+    PATH=$HOME/.ndenv/bin:$PATH
+    eval "$(ndenv init -)"
+fi
+
 if [ -d $HOME/.rvm ]; then
     PATH=$HOME/.rvm/bin:$PATH
 fi

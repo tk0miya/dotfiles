@@ -87,6 +87,25 @@ done
 plenv global 5.18.2
 
 echo ""
+echo "Setup ndenv ..."
+if [ -d $HOME/.ndenv ]; then
+    (cd $HOME/.ndenv && git pull)
+    (cd $HOME/.ndenv/plugins/node-build && git pull)
+else
+    git clone https://github.com/riywo/ndenv $HOME/.ndenv
+    git clone https://github.com/riywo/node-build.git $HOME/.ndenv/plugins/node-build
+
+    PATH=$HOME/.ndenv/bin:$PATH
+    eval "$(ndenv init -)"
+fi
+for version in v0.10.28; do
+    if [ ! -d "$HOME/.ndenv/versions/$version" ]; then
+        ndenv install $version
+    fi
+done
+ndenv global v0.10.28
+
+echo ""
 echo "Setup $HOME/bin ..."
 if [ ! -d $HOME/bin ]; then
     mkdir -p $HOME/bin
