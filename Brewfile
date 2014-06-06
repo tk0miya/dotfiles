@@ -38,7 +38,6 @@ cask install inkscape
 cask install mactex
 cask install mplayerx
 cask install opera
-cask install reeder
 cask install remote-desktop-connection
 cask install skype
 cask install sourcetree
