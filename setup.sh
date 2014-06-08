@@ -114,7 +114,7 @@ fi
 echo ""
 echo "Setup python environments ..."
 pip install --upgrade setuptools
-pip install --upgrade pip mercurial detox flake8 hub diff-highlight
+pip install --upgrade pip mercurial detox flake8 hub diff-highlight wheel
 
 echo ""
 echo "Setup hg extensions ..."
