@@ -11,6 +11,7 @@ install freetype
 install git
 install imagemagick
 install jpeg
+install jq
 install mercurial
 install openssl
 install vim
