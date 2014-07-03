@@ -1,9 +1,9 @@
 #!/bin/sh
 
 if [ `hostname` == "deneb" ]; then
-    REGULAR_PYTHON_VERSIONS="2.7.7 2.5.6 2.6.9 3.2.5 3.3.5 3.4.1"
+    REGULAR_PYTHON_VERSIONS="2.7.8 2.5.6 2.6.9 3.2.5 3.3.5 3.4.1"
 else
-    REGULAR_PYTHON_VERSIONS=2.7.7
+    REGULAR_PYTHON_VERSIONS=2.7.8
 fi
 
 if [ `uname -s` == "Darwin" ]; then
