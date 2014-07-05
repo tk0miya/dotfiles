@@ -8,6 +8,7 @@ tap caskroom/homebrew-versions
 # packages
 install brew-cask
 install freetype
+install gettext
 install git
 install imagemagick
 install jpeg
@@ -15,6 +16,8 @@ install jq
 install mercurial
 install openssl
 install vim
+
+link gettext --force
 
 cleanup
 
