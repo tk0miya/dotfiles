@@ -1,12 +1,14 @@
 #!/bin/sh
 
-if [ `hostname` == "deneb" ]; then
+if [ `hostname` = "deneb" ]; then
     REGULAR_PYTHON_VERSIONS="2.7.8 2.5.6 2.6.9 3.2.5 3.3.5 3.4.1"
+elif [ `hostname` = "capella" ]; then
+    REGULAR_PYTHON_VERSIONS="2.7.8 3.3.5 3.4.1"
 else
-    REGULAR_PYTHON_VERSIONS=2.7.8
+    REGULAR_PYTHON_VERSIONS="2.7.8"
 fi
 
-if [ `uname -s` == "Darwin" ]; then
+if [ `uname -s` = "Darwin" ]; then
     echo ""
     echo "Setup Homebrew ..."
     if [ -x /usr/local/bin/brew ]; then
