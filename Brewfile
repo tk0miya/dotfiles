@@ -15,6 +15,7 @@ install jpeg
 install jq
 install mercurial
 install openssl
+install pandoc
 install vim
 
 link gettext --force
