@@ -10,6 +10,7 @@ install brew-cask
 install freetype
 install gettext
 install git
+install graphviz
 install imagemagick
 install jpeg
 install jq
