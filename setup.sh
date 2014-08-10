@@ -47,6 +47,8 @@ for version in 1.9.3-p484 2.1.0; do
     fi
 done
 rbenv global 2.1.0
+gem install gist
+gem update
 
 echo ""
 echo "Setup pyenv ..."
