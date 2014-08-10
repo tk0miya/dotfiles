@@ -26,6 +26,10 @@ if [ -d /usr/pkg ]; then
     PATH=/usr/pkg/bin:/usr/pkg/sbin:$PATH
 fi
 
+if [ -d /usr/local/texlive/2013/bin/x86_64-darwin ]; then
+    PATH=/usr/local/texlive/2013/bin/x86_64-darwin:$PATH
+fi
+
 if [ -d $HOME/bin/python/bin ]; then
     PATH=$HOME/bin/python/bin:$PATH
 fi
