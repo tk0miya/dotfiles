@@ -17,6 +17,7 @@ install jq
 install mercurial
 install openssl
 install pandoc
+install ssh-copy-id
 install vim
 
 link gettext --force
