@@ -41,6 +41,7 @@ cask install keepassx0
 cask install keyremap4macbook
 cask install iterm2
 cask install inkscape
+cask install java
 cask install mactex
 cask install mplayerx
 cask install opera
