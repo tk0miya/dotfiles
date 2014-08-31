@@ -6,6 +6,7 @@ editor = vim
 [extensions]
 color =
 rebase =
+transplant =
 graphlog =
 mq =
 pager =
