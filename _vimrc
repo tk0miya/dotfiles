@@ -2,7 +2,7 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -14,6 +14,8 @@ NeoBundle 'nishigori/increment-activator' " Enhance increment/decrement feature
 NeoBundle 'itchyny/lightline.vim'         " Customize status line
 NeoBundle 'nanotech/jellybeans.vim'       " Colorscheme
 NeoBundle 'w0ng/vim-hybrid'               " Colorscheme
+
+call neobundle#end()
 
 " highlight Zenkaku spaces
 augroup highlightDoubleByteSpace
