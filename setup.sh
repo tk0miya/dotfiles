@@ -41,12 +41,12 @@ else
     PATH=$HOME/.rbenv/bin:$PATH
     eval "$(rbenv init -)"
 fi
-for version in 1.9.3-p484 2.1.3; do
+for version in 1.9.3-p550 2.1.4; do
     if [ ! -d "$HOME/.rbenv/versions/$version" ]; then
         rbenv install $version
     fi
 done
-rbenv global 2.1.3
+rbenv global 2.1.4
 gem install gist
 gem update
 
