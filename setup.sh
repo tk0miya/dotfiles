@@ -117,6 +117,10 @@ fi
 
 echo ""
 echo "Setup python environments ..."
+if [ ! -e $HOME/.pip ]; then
+    echo "Creating $HOME/.pip ..."
+    ln -s "$PWD/_pip" $HOME/.pip
+fi
 pip install --upgrade setuptools
 pip install --upgrade pip mercurial detox flake8 hub diff-highlight wheel docutils
 
