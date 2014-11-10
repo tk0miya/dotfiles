@@ -81,14 +81,14 @@ else
     PATH=$HOME/.plenv/bin:$PATH
     eval "$(plenv init -)"
 fi
-for version in 5.18.2; do
+for version in 5.21.5; do
     if [ ! -d "$HOME/.plenv/versions/$version" ]; then
         plenv install $version -Dusethreads
         plenv global $version
         plenv install-cpanm
     fi
 done
-plenv global 5.18.2
+plenv global 5.21.5
 
 echo ""
 echo "Setup ndenv ..."
