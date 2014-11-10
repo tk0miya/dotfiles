@@ -2,3 +2,4 @@ _vim/bundle
 _vim/.netrwhist
 _pip/pip.log
 _pip/cache/
+_pip/wheel/

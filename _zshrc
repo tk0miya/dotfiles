@@ -59,6 +59,7 @@ if [ -d $HOME/.rvm ]; then
 fi
 
 export EDITOR=vi
+export PIP_FIND_LINKS=$HOME/.pip/wheel
 
 # Set locale
 export LANG=ja_JP.UTF-8
