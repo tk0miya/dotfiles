@@ -1,11 +1,11 @@
 #!/bin/sh
 
 if [ `hostname` = "deneb" ]; then
-    REGULAR_PYTHON_VERSIONS="2.7.8 2.5.6 2.6.9 3.2.6 3.3.6 3.4.2"
+    REGULAR_PYTHON_VERSIONS="2.7.9 2.5.6 2.6.9 3.2.6 3.3.6 3.4.2"
 elif [ `hostname` = "capella" ]; then
-    REGULAR_PYTHON_VERSIONS="2.7.8 3.4.2"
+    REGULAR_PYTHON_VERSIONS="2.7.9 3.4.2"
 else
-    REGULAR_PYTHON_VERSIONS="2.7.8"
+    REGULAR_PYTHON_VERSIONS="2.7.9"
 fi
 
 if [ `uname -s` = "Darwin" ]; then
