@@ -17,6 +17,7 @@ if [ `uname -s` = "Darwin" ]; then
         ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
     fi
 
+    brew tap homebrew/boneyard
     brew bundle
     PATH=/usr/local/bin:$PATH
 fi
