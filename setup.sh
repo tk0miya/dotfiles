@@ -123,7 +123,7 @@ if [ ! -e $HOME/.pip ]; then
     ln -s "$PWD/_pip" $HOME/.pip
 fi
 pip install --upgrade setuptools
-pip install --upgrade pip mercurial detox flake8 hub diff-highlight wheel docutils
+pip install --upgrade pip mercurial detox flake8 diff-highlight wheel docutils
 
 echo ""
 echo "Setup hg extensions ..."

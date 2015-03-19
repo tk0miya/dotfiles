@@ -11,6 +11,7 @@ install freetype
 install gettext
 install git
 install graphviz
+install hub
 install imagemagick
 install jpeg
 install jq
