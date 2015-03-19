@@ -80,6 +80,7 @@ setopt share_history
 alias ls='ls -F'
 alias vi='vim'
 alias pstree='pstree -A'
+eval "$(hub alias -s)"  # replace `git` by `hub` command
 
 # reverse menu compeltion (Shift + Tab)
 bindkey "\e[Z" reverse-menu-complete
