@@ -38,7 +38,7 @@ typeset -u PATH  # keep $PATH unique
 
 fpath=($HOME/.zsh/completion $fpath)
 
-export EDITOR=vi
+export EDITOR=vim
 export PIP_FIND_LINKS=$HOME/.pip/wheel
 
 # Set locale
