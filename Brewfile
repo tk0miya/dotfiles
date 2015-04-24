@@ -6,6 +6,7 @@ tap caskroom/cask
 tap caskroom/homebrew-versions
 
 # packages
+install ascii
 install brew-cask
 install freetype
 install gettext
@@ -15,7 +16,6 @@ install hub
 install imagemagick
 install jpeg
 install jq
-install mercurial
 install openssl
 install pandoc
 install ssh-copy-id
@@ -39,11 +39,10 @@ cask install firefox
 cask install google-chrome
 cask install google-drive
 cask install google-japanese-ime
+cask install iterm2
+cask install java
 cask install keepassx0
 cask install keyremap4macbook
-cask install iterm2
-cask install inkscape
-cask install java
 cask install mactex
 cask install mplayerx
 cask install opera
