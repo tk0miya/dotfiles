@@ -10,6 +10,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " add plugins
 NeoBundle 'alfredodeza/khuno.vim'         " Lint with flake8
 NeoBundle 'hynek/vim-python-pep8-indent'  " PEP8 based auto indentation
+NeoBundle 'scrooloose/syntastic'          " Syntax checker
 NeoBundle 'nishigori/increment-activator' " Enhance increment/decrement feature
 NeoBundle 'itchyny/lightline.vim'         " Customize status line
 NeoBundle 'nanotech/jellybeans.vim'       " Colorscheme
