@@ -35,9 +35,11 @@ echo "Setup rbenv ..."
 if [ -d $HOME/.rbenv ]; then
     (cd $HOME/.rbenv && git pull)
     (cd $HOME/.rbenv/plugins/ruby-build && git pull)
+    (cd $HOME/.rbenv/plugins/rbenv-ctags && git pull)
 else
     git clone https://github.com/sstephenson/rbenv $HOME/.rbenv
     git clone https://github.com/sstephenson/ruby-build $HOME/.rbenv/plugins/ruby-build
+    git clone https://github.com/tpope/rbenv-ctags $HOME/.rbenv/plugins/rbenv-ctags
 
     PATH=$HOME/.rbenv/bin:$PATH
     eval "$(rbenv init -)"

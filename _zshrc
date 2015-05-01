@@ -20,7 +20,7 @@ esac
 # Kill Ctrl+D key
 #setopt ignoreeof
 
-PATH=$HOME/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin/X11:/usr/games
+PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/bin/X11:/usr/games
 
 if [ -d /usr/pkg ]; then
     PATH=/usr/pkg/bin:/usr/pkg/sbin:$PATH

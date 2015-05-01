@@ -8,6 +8,7 @@ tap caskroom/homebrew-versions
 # packages
 install ascii
 install brew-cask
+install ctags
 install s3cmd
 install freetype
 install gettext
