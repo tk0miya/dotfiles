@@ -11,6 +11,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'alfredodeza/khuno.vim'         " Lint with flake8
 NeoBundle 'hynek/vim-python-pep8-indent'  " PEP8 based auto indentation
 NeoBundle 'scrooloose/syntastic'          " Syntax checker
+NeoBundle 'tpope/vim-endwise'             " Auto complete 'end' keyword (in Ruby)
 NeoBundle 'nishigori/increment-activator' " Enhance increment/decrement feature
 NeoBundle 'itchyny/lightline.vim'         " Customize status line
 NeoBundle 'nanotech/jellybeans.vim'       " Colorscheme
