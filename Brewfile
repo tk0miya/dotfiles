@@ -20,8 +20,9 @@ install jpeg
 install jq
 install openssl
 install pandoc
+install rsense
 install ssh-copy-id
-install vim
+install vim --with-lua --HEAD
 
 link gettext --force
 

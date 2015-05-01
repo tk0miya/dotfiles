@@ -8,14 +8,17 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " add plugins
-NeoBundle 'alfredodeza/khuno.vim'         " Lint with flake8
-NeoBundle 'hynek/vim-python-pep8-indent'  " PEP8 based auto indentation
-NeoBundle 'scrooloose/syntastic'          " Syntax checker
-NeoBundle 'tpope/vim-endwise'             " Auto complete 'end' keyword (in Ruby)
-NeoBundle 'nishigori/increment-activator' " Enhance increment/decrement feature
-NeoBundle 'itchyny/lightline.vim'         " Customize status line
-NeoBundle 'nanotech/jellybeans.vim'       " Colorscheme
-NeoBundle 'w0ng/vim-hybrid'               " Colorscheme
+NeoBundle 'alfredodeza/khuno.vim'               " Lint with flake8
+NeoBundle 'hynek/vim-python-pep8-indent'        " PEP8 based auto indentation
+NeoBundle 'scrooloose/syntastic'                " Syntax checker
+NeoBundle 'Shougo/neocomplete.vim'              " Auto completion
+NeoBundle 'marcus/rsense'                       " Ruby development helper
+NeoBundle 'supermomonga/neocomplete-rsense.vim' " rsense plugin for neocomplete
+NeoBundle 'tpope/vim-endwise'                   " Auto complete 'end' keyword (in Ruby)
+NeoBundle 'nishigori/increment-activator'       " Enhance increment/decrement feature
+NeoBundle 'itchyny/lightline.vim'               " Customize status line
+NeoBundle 'nanotech/jellybeans.vim'             " Colorscheme
+NeoBundle 'w0ng/vim-hybrid'                     " Colorscheme
 
 call neobundle#end()
 
@@ -79,6 +82,14 @@ endif
 " Enable colorscheme
 colorscheme jellybeans
 syntax on
+
+" Enable neocomplete
+let g:acp_enableAtStartup = 0
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+if !exists('g:neocomplete#force_omni_input_patterns')
+  let g:neocomplete#force_omni_input_patterns = {}
+endif
 
 filetype plugin on
 filetype plugin indent on
