@@ -56,7 +56,7 @@ for version in 1.9.3-p550 2.2.1; do
     fi
 done
 rbenv global 2.2.1
-gem install gist
+gem install bundler gist
 gem update
 
 echo ""
