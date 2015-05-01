@@ -23,6 +23,12 @@ if [ `uname -s` = "Darwin" ]; then
 fi
 
 echo ""
+echo "Setup zsh ..."
+curl -L -o _zsh/completion/_git https://raw.github.com/git/git/master/contrib/completion/git-completion.zsh
+curl -L -o _zsh/completion/git-completion.bash https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
+curl -L -o _zsh/completion/_hub https://raw.githubusercontent.com/github/hub/master/etc/hub.zsh_completion
+
+echo ""
 echo "Setup vim extensions ..."
 if [ -d _vim/bundle/neobundle.vim ]; then
     (cd _vim/bundle/neobundle.vim  && git pull)

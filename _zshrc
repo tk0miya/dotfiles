@@ -58,6 +58,8 @@ if [ -d $HOME/.rvm ]; then
     PATH=$HOME/.rvm/bin:$PATH
 fi
 
+fpath=($HOME/.zsh/completion $fpath)
+
 export EDITOR=vi
 export PIP_FIND_LINKS=$HOME/.pip/wheel
 
