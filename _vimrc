@@ -16,6 +16,8 @@ NeoBundle 'marcus/rsense'                       " Ruby development helper
 NeoBundle 'supermomonga/neocomplete-rsense.vim' " rsense plugin for neocomplete
 NeoBundle 'tpope/vim-endwise'                   " Auto complete 'end' keyword (in Ruby)
 NeoBundle 'nishigori/increment-activator'       " Enhance increment/decrement feature
+NeoBundle 'thinca/vim-ref'                      " Reference viewer
+NeoBundle 'yuku-t/vim-ref-ri'                   " Ruby plugin for vim-ref
 NeoBundle 'itchyny/lightline.vim'               " Customize status line
 NeoBundle 'nanotech/jellybeans.vim'             " Colorscheme
 NeoBundle 'w0ng/vim-hybrid'                     " Colorscheme

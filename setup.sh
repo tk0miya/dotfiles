@@ -56,8 +56,9 @@ for version in 1.9.3-p550 2.2.1; do
     fi
 done
 rbenv global 2.2.1
-gem install bundler gist
+gem install bundler gist refe2
 gem update
+bitclust update
 
 echo ""
 echo "Setup pyenv ..."
