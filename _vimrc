@@ -8,6 +8,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " add plugins
+NeoBundle 'tpope/vim-fugitive'                  " Activate .git/ctags
 NeoBundle 'alfredodeza/khuno.vim'               " Lint with flake8
 NeoBundle 'hynek/vim-python-pep8-indent'        " PEP8 based auto indentation
 NeoBundle 'scrooloose/syntastic'                " Syntax checker
@@ -106,6 +107,12 @@ autocmd Filetype * set formatoptions-=ro
 
 " Jump to last position on the file
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
+" Update ctags file on writing (w/ vim-fugitive)
+autocmd BufWritePost *
+\ if exists('b:git_dir') && executable(b:git_dir.'/hooks/ctags') |
+\   call system('"'.b:git_dir.'/hooks/ctags" &') |
+\ endif
 
 " For neocomplete
 function! s:choice_from_neocomplete()
