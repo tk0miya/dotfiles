@@ -17,46 +17,24 @@ case $TERM in
         ;;
 esac
 
-# Kill Ctrl+D key
-#setopt ignoreeof
-
-PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/bin/X11:/usr/games
-
-if [ -d /usr/pkg ]; then
-    PATH=/usr/pkg/bin:/usr/pkg/sbin:$PATH
-fi
-
-if [ -d /usr/local/texlive/2014/bin/x86_64-darwin ]; then
-    PATH=/usr/local/texlive/2014/bin/x86_64-darwin:$PATH
-fi
-
-if [ -d $HOME/bin/python/bin ]; then
-    PATH=$HOME/bin/python/bin:$PATH
-fi
-
+# Setup *env
 if [ -d $HOME/.rbenv ]; then
-    PATH=$HOME/.rbenv/bin:$PATH
     eval "$(rbenv init -)"
 fi
 
 if [ -d $HOME/.pyenv ]; then
-    PATH=$HOME/.pyenv/bin:$PATH
     eval "$(pyenv init -)"
 fi
 
 if [ -d $HOME/.plenv ]; then
-    PATH=$HOME/.plenv/bin:$PATH
     eval "$(plenv init -)"
 fi
 
 if [ -d $HOME/.ndenv ]; then
-    PATH=$HOME/.ndenv/bin:$PATH
     eval "$(ndenv init -)"
 fi
 
-if [ -d $HOME/.rvm ]; then
-    PATH=$HOME/.rvm/bin:$PATH
-fi
+typeset -u PATH  # keep $PATH unique
 
 fpath=($HOME/.zsh/completion $fpath)
 
