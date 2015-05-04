@@ -162,12 +162,16 @@ endif
 filetype plugin on
 filetype plugin indent on
 
-" Do not treat new line as comment
-" (this setting should be enable after filetype plugin)
-autocmd Filetype * set formatoptions-=ro
+augroup vimrc
+  autocmd!
 
-" Jump to last position on the file
-autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+  " Do not treat new line as comment
+  " (this setting should be enable after filetype plugin)
+  autocmd Filetype * set formatoptions-=ro
+
+  " Jump to last position on the file
+  autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+augroup END
 
 " For neocomplete
 function! s:choice_from_neocomplete()
