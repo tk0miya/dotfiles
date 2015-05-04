@@ -11,7 +11,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'szw/vim-tags'                        " Control ctags
 NeoBundle 'alfredodeza/khuno.vim'               " Lint with flake8
 NeoBundle 'hynek/vim-python-pep8-indent'        " PEP8 based auto indentation
-NeoBundle 'scrooloose/syntastic'                " Syntax checker
 NeoBundle 'Shougo/neocomplete.vim'              " Auto completion
 NeoBundle 'marcus/rsense'                       " Ruby development helper
 NeoBundle 'supermomonga/neocomplete-rsense.vim' " rsense plugin for neocomplete
@@ -22,8 +21,70 @@ NeoBundle 'yuku-t/vim-ref-ri'                   " Ruby plugin for vim-ref
 NeoBundle 'itchyny/lightline.vim'               " Customize status line
 NeoBundle 'nanotech/jellybeans.vim'             " Colorscheme
 NeoBundle 'w0ng/vim-hybrid'                     " Colorscheme
+NeoBundle 'Shougo/vimproc.vim', {
+\           'build' : {
+\             'windows' : 'tools\\update-dll-mingw',
+\             'cygwin' : 'make -f make_cygwin.mak',
+\             'mac' : 'make -f make_mac.mak',
+\             'linux' : 'make',
+\             'unix' : 'gmake',
+\           },
+\         }                                     " Asynchronous execution
+NeoBundle "thinca/vim-quickrun"                 " Command runner
+NeoBundle "osyo-manga/shabadou.vim"             " plugins for quickrun
+NeoBundle "osyo-manga/vim-watchdogs"            " syntax checker plugin for quickrun
+NeoBundle "cohama/vim-hier"                     " Highlights quickfix errors
+NeoBundle "dannyob/quickfixstatus"              " Show quickfix error message for current line
+NeoBundle "KazuakiM/vim-qfstatusline"           " Show quickfix status to status-line
 
 call neobundle#end()
+
+" lightline (status-line)
+let g:lightline = {
+\  'mode_map': {'c': 'NORMAL'},
+\  'active': {
+\    'right': [
+\      [ 'syntaxcheck' ],
+\    ]
+\  },
+\  'component_expand': {
+\    'syntaxcheck': 'qfstatusline#Update',
+\  },
+\  'component_type': {
+\    'syntaxcheck': 'error',
+\  },
+\}
+
+" Setup quickrun
+if !exists("g:quickrun_config")
+  let g:quickrun_config = {}
+endif
+let g:quickrun_config["_"] = {
+\  "runner" : "vimproc",
+\  "runner/vimproc/sleep": 5,
+\  "runner/vimproc/updatetime" : 20,
+\  "runner/vimproc/read_timeout" : 1,
+\}
+
+" Setup watchdogs
+let g:quickrun_config["watchdogs_checker/_"] = {
+\  "outputter/quickfix/open_cmd" : "",
+\  "hook/qfstatusline_update/enable_exit" : 1,
+\  "hook/qfstatusline_update/priority_exit" : 4,
+\}
+
+let g:quickrun_config["ruby/watchdogs_checker"] = {
+\  "type" : "watchdogs_checker/rubocop"
+\}
+
+let g:watchdogs_check_CursorHold_enables = {
+\  "ruby" : 1
+\}
+call watchdogs#setup(g:quickrun_config)
+
+" Callback lightline#update after :WatchdogsRun
+let g:Qfstatusline#Text = 0
+let g:Qfstatusline#UpdateCmd = function('lightline#update')
 
 " highlight Zenkaku spaces
 augroup highlightDoubleByteSpace
