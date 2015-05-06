@@ -36,6 +36,7 @@ NeoBundle "osyo-manga/vim-watchdogs"            " syntax checker plugin for quic
 NeoBundle "cohama/vim-hier"                     " Highlights quickfix errors
 NeoBundle "dannyob/quickfixstatus"              " Show quickfix error message for current line
 NeoBundle "KazuakiM/vim-qfstatusline"           " Show quickfix status to status-line
+NeoBundle "tpope/vim-rails"                     " Utilities for Ruby on Rails
 
 call neobundle#end()
 
