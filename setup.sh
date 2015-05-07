@@ -20,6 +20,13 @@ if [ `uname -s` = "Darwin" ]; then
     brew tap homebrew/boneyard
     brew bundle
     PATH=/usr/local/bin:$PATH
+
+    echo ""
+    echo "Setup fonts ..."
+    if [ ! -e "$HOME/Library/Fonts/Monaco for Powerline.otf" ]; then
+        curl -L https://gist.github.com/baopham/1838072/raw/5fa73caa4af86285f11539a6b4b6c26cfca2c04b/Monaco%20for%20Powerline.otf \
+            -o "$HOME/Library/Fonts/Monaco for Powerline.otf"
+    fi
 fi
 
 echo ""
