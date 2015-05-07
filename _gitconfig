@@ -3,7 +3,7 @@
 	email = i.tkomiya@gmail.com
 [core]
 	excludesfile = /Users/tkomiya/.gitignore_global
-	editor = /usr/bin/vim
+	editor = vim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
