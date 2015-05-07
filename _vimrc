@@ -37,6 +37,8 @@ NeoBundle "cohama/vim-hier"                     " Highlights quickfix errors
 NeoBundle "dannyob/quickfixstatus"              " Show quickfix error message for current line
 NeoBundle "KazuakiM/vim-qfstatusline"           " Show quickfix status to status-line
 NeoBundle "tpope/vim-rails"                     " Utilities for Ruby on Rails
+NeoBundle 'rcmdnk/vim-markdown'                 " Syntax highlighting for markdown
+NeoBundle 'joker1007/vim-markdown-quote-syntax' " Syntax highlighting for code-blocks in markdown
 
 call neobundle#end()
 
