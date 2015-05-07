@@ -1,10 +1,16 @@
 # Set up the prompt
 
+autoload -U colors; colors
 autoload -Uz promptinit
 autoload -Uz vcs_info
-setopt prompt_subst
 promptinit
 prompt walters
+setopt prompt_subst
+RPROMPT="%{${fg[green]}%}%~\${vcs_info_msg_0_}%{${reset_color}%}"
+
+zstyle ':vcs_info:*' enable git hg
+zstyle ':vcs_info:*' formats " [%b%c%u]"
+zstyle ':vcs_info:*' actionformats " [%b; %a%c%u]"
 
 case $TERM in
     screen)
@@ -12,7 +18,13 @@ case $TERM in
             echo -ne "\ek$1\e\\"
         }
         precmd() {
+            vcs_info
             echo -ne "\ek$(basename $SHELL)\e\\"
+        }
+        ;;
+    *)
+        precmd() {
+            vcs_info
         }
         ;;
 esac
