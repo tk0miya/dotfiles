@@ -79,7 +79,7 @@ bindkey "\e[Z" reverse-menu-complete
 
 # Use modern completion system
 autoload -Uz compinit
-compinit
+compinit -C
 
 if [ -x /usr/bin/dircolors ]; then
     eval "$(dircolors -b)"
