@@ -70,20 +70,22 @@ let g:quickrun_config["_"] = {
 \}
 
 " Setup watchdogs
-let g:quickrun_config["watchdogs_checker/_"] = {
-\  "outputter/quickfix/open_cmd" : "",
-\  "hook/qfstatusline_update/enable_exit" : 1,
-\  "hook/qfstatusline_update/priority_exit" : 4,
-\}
+if neobundle#is_installed('vim-watchdogs')
+  let g:quickrun_config["watchdogs_checker/_"] = {
+  \  "outputter/quickfix/open_cmd" : "",
+  \  "hook/qfstatusline_update/enable_exit" : 1,
+  \  "hook/qfstatusline_update/priority_exit" : 4,
+  \}
 
-let g:quickrun_config["ruby/watchdogs_checker"] = {
-\  "type" : "watchdogs_checker/rubocop"
-\}
+  let g:quickrun_config["ruby/watchdogs_checker"] = {
+  \  "type" : "watchdogs_checker/rubocop"
+  \}
 
-let g:watchdogs_check_CursorHold_enables = {
-\  "ruby" : 1
-\}
-call watchdogs#setup(g:quickrun_config)
+  let g:watchdogs_check_CursorHold_enables = {
+  \  "ruby" : 1
+  \}
+  call watchdogs#setup(g:quickrun_config)
+endif
 
 " Callback lightline#update after :WatchdogsRun
 let g:Qfstatusline#Text = 0
@@ -151,7 +153,9 @@ if $TERM == 'screen'
 endif
 
 " Enable colorscheme
-colorscheme jellybeans
+if neobundle#is_installed('jellybeans.vim')
+  colorscheme jellybeans
+endif
 syntax on
 
 " Enable neocomplete
