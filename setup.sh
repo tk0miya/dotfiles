@@ -38,6 +38,12 @@ elif [ -e '/etc/redhat-release' ]; then
 fi
 
 echo ""
+echo "Setup submodules ..."
+git submodule update --init
+git submodule foreach git checkout master
+git submodule foreach git pull
+
+echo ""
 echo "Setup zsh ..."
 curl -L -o _zsh/completion/_git https://raw.github.com/git/git/master/contrib/completion/git-completion.zsh
 curl -L -o _zsh/completion/git-completion.bash https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
@@ -45,11 +51,7 @@ curl -L -o _zsh/completion/_hub https://raw.githubusercontent.com/github/hub/mas
 
 echo ""
 echo "Setup vim extensions ..."
-if [ -d _vim/bundle/neobundle.vim ]; then
-    (cd _vim/bundle/neobundle.vim  && git pull)
-else
-    git clone https://github.com/Shougo/neobundle.vim _vim/bundle/neobundle.vim
-fi
+_vim/bundle/neobundle.vim/bin/neoinstall
 
 echo ""
 echo "Setup rbenv ..."
