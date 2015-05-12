@@ -44,6 +44,23 @@ git submodule foreach git checkout master
 git submodule foreach git pull
 
 echo ""
+echo "Creating dotfile symlinks ..."
+for dotfile in _?*
+do
+    dotname=`echo $dotfile | sed -e "s/^_/./"`
+    if [ $dotfile != '..' ] && [ $dotfile != '.hg' ]; then
+        if [ -L $HOME/$dotname ]; then
+            cat /dev/null  # noop
+        elif [ -e $HOME/$dotname ]; then
+            echo "Ignore $HOME/$dotname (already exists)"
+        else
+            echo "Creating $HOME/$dotname ..."
+            ln -s "$PWD/$dotfile" $HOME/$dotname
+        fi
+    fi
+done
+
+echo ""
 echo "Setup zsh ..."
 curl -L -o _zsh/completion/_git https://raw.github.com/git/git/master/contrib/completion/git-completion.zsh
 curl -L -o _zsh/completion/git-completion.bash https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
@@ -158,20 +175,3 @@ if [ -d _hgext/hgbb ]; then
 else
     (cd _hgext && hg clone https://bitbucket.org/birkenfeld/hgbb)
 fi
-
-echo ""
-echo "Creating dotfile symlinks ..."
-for dotfile in _?*
-do
-    dotname=`echo $dotfile | sed -e "s/^_/./"`
-    if [ $dotfile != '..' ] && [ $dotfile != '.hg' ]; then
-        if [ -L $HOME/$dotname ]; then
-            cat /dev/null  # noop
-        elif [ -e $HOME/$dotname ]; then
-            echo "Ignore $HOME/$dotname (already exists)"
-        else
-            echo "Creating $HOME/$dotname ..."
-            ln -s "$PWD/$dotfile" $HOME/$dotname
-        fi
-    fi
-done
