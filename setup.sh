@@ -72,18 +72,12 @@ _vim/bundle/neobundle.vim/bin/neoinstall
 
 echo ""
 echo "Setup rbenv ..."
-if [ -d $HOME/.rbenv ]; then
-    (cd $HOME/.rbenv && git pull)
-    (cd $HOME/.rbenv/plugins/ruby-build && git pull)
-    (cd $HOME/.rbenv/plugins/rbenv-ctags && git pull)
-else
-    git clone https://github.com/sstephenson/rbenv $HOME/.rbenv
-    git clone https://github.com/sstephenson/ruby-build $HOME/.rbenv/plugins/ruby-build
-    git clone https://github.com/tpope/rbenv-ctags $HOME/.rbenv/plugins/rbenv-ctags
+mkdir -p _rbenv/plugins
+ln -sF $PWD/lib/rbenv/plugins/ruby-build _rbenv/plugins
+ln -sF $PWD/lib/rbenv/plugins/rbenv-ctags _rbenv/plugins
 
-    PATH=$HOME/.rbenv/bin:$PATH
-    eval "$(rbenv init -)"
-fi
+PATH=$HOME/.rbenv/bin:$PATH
+eval "$(rbenv init -)"
 for version in 1.9.3-p550 2.2.1; do
     if [ ! -d "$HOME/.rbenv/versions/$version" ]; then
         rbenv install $version

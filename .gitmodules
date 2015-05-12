@@ -1,3 +1,12 @@
 [submodule "_vim/bundle/neobundle.vim"]
 	path = _vim/bundle/neobundle.vim
 	url = https://github.com/Shougo/neobundle.vim
+[submodule "_rbenv"]
+	path = _rbenv
+	url = https://github.com/sstephenson/rbenv
+[submodule "lib/rbenv/plugins/ruby-build"]
+	path = lib/rbenv/plugins/ruby-build
+	url = https://github.com/sstephenson/ruby-build
+[submodule "lib/rbenv/plugins/rbenv-ctags"]
+	path = lib/rbenv/plugins/rbenv-ctags
+	url = https://github.com/tpope/rbenv-ctags
