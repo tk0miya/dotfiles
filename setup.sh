@@ -90,16 +90,10 @@ bitclust update
 
 echo ""
 echo "Setup pyenv ..."
-if [ -d $HOME/.pyenv ]; then
-    (cd $HOME/.pyenv && git pull)
-    (cd $HOME/.pyenv/plugins/python-virtualenv && git pull)
-else
-    git clone git://github.com/yyuu/pyenv.git $HOME/.pyenv
-    git clone git://github.com/yyuu/python-virtualenv.git $HOME/.pyenv/plugins/python-virtualenv
+ln -sF $PWD/lib/pyenv/plugins/python-virtualenv _pyenv/plugins
 
-    PATH=$HOME/.pyenv/bin:$PATH
-    eval "$(pyenv init -)"
-fi
+PATH=$HOME/.pyenv/bin:$PATH
+eval "$(pyenv init -)"
 for version in $REGULAR_PYTHON_VERSIONS; do
     if [ ! -d "$HOME/.pyenv/versions/$version" ]; then
         pyenv install $version
