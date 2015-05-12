@@ -16,3 +16,9 @@
 [submodule "lib/pyenv/plugins/python-virtualenv"]
 	path = lib/pyenv/plugins/python-virtualenv
 	url = https://github.com/yyuu/python-virtualenv
+[submodule "_plenv"]
+	path = _plenv
+	url = https://github.com/tokuhirom/plenv
+[submodule "lib/plenv/plugins/perl-build"]
+	path = lib/plenv/plugins/perl-build
+	url = https://github.com/tokuhirom/Perl-Build
