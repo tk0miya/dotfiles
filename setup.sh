@@ -131,17 +131,7 @@ done
 ndenv global v0.12.2
 
 echo ""
-echo "Setup $HOME/bin ..."
-if [ ! -d $HOME/bin ]; then
-    mkdir -p $HOME/bin
-fi
-
-echo ""
 echo "Setup python environments ..."
-if [ ! -e $HOME/.pip ]; then
-    echo "Creating $HOME/.pip ..."
-    ln -s "$PWD/_pip" $HOME/.pip
-fi
 pip install --upgrade setuptools
 pip install --upgrade pip mercurial detox flake8 diff-highlight wheel docutils
 
