@@ -74,6 +74,10 @@ alias vi='vim'
 alias pstree='pstree -A'
 eval "$(hub alias -s)"  # replace `git` by `hub` command
 
+if [ `uname -s` = "Darwin" ]; then
+    alias top='top -s1 -o cpu -R -F'
+fi
+
 # reverse menu compeltion (Shift + Tab)
 bindkey "\e[Z" reverse-menu-complete
 
