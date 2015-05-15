@@ -6,6 +6,7 @@ tap caskroom/cask
 tap caskroom/homebrew-versions
 
 # packages
+install Caskroom/cask/xquartz
 install ascii
 install brew-cask
 install ctags
@@ -15,7 +16,7 @@ install gettext
 install git
 install graphviz
 install hub
-install imagemagick
+install imagemagick --with-librsvg
 install jpeg
 install jq
 install openssl
