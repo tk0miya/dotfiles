@@ -123,6 +123,7 @@ set cursorline                      " Show cursor line
 set autoread                        " Auto reload file if buffer is not changed
 set autoindent                      " Do auto indent
 set smartindent                     " Do auto indent
+set backspace=indent,eol            " Allow removing indents and EOLs by backspace
 
 " key mappings (moves)
 " - Move cursor by display line
