@@ -12,10 +12,13 @@
 	trustExitCode = true
 [color]
 	ui = true
-
 [pager]
 	log = diff-highlight | less -+S
 	show = diff-highlight | less -+S
 	diff = diff-highlight | less -+S
 [init]
 	templatedir = ~/.git_template
+[alias]
+	ci = commit
+	glog = log --graph
+	st = status
