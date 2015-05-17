@@ -20,5 +20,6 @@
 	templatedir = ~/.git_template
 [alias]
 	ci = commit
+	co = checkout
 	glog = log --graph
 	st = status
