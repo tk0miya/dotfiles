@@ -160,7 +160,6 @@ endif
 syntax on
 
 " Enable neocomplete
-let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1             " Enable neocomplete at startup
 let g:neocomplete#enable_smart_case = 1             " Case sensitive search if pattern contains CAPITAL chars
 let g:neocomplete#enable_auto_close_preview = 1     " Close preview automatically
