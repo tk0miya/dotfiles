@@ -60,13 +60,16 @@ export LC_ALL=ja_JP.UTF-8
 # Use emacs keybindings even if our EDITOR is set to vi
 bindkey -e
 
-# Keep 100,000 lines of history within the shell and save it to ~/.zsh_history:
-HISTSIZE=100000
-SAVEHIST=100000
-HISTFILE=/tmp/.zsh_history
+# Keep 1,000,000 lines of history within the shell and save it to ~/.zsh_history:
+HISTSIZE=1000000
+SAVEHIST=1000000
 
-setopt hist_ignore_dups
-setopt share_history
+setopt hist_ignore_dups         # Do not record history if new command is same as previous one
+setopt hist_ignore_all_dups     # Remove duplicated command from history if new command is already recorded
+setopt hist_ignore_space        # Do not record history if command starts with spaces
+setopt hist_reduce_blanks       # Remove superfluous blanks from commands
+setopt hist_no_store            # Do not record 'history' command
+setopt share_history            # Share history with zsh proceses
 
 # Aliases
 alias ls='ls -F'
