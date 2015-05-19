@@ -124,6 +124,7 @@ set autoread                        " Auto reload file if buffer is not changed
 set autoindent                      " Do auto indent
 set smartindent                     " Do auto indent
 set backspace=indent,eol            " Allow removing indents and EOLs by backspace
+set splitbelow                      " Put a new window below the current one when opening it
 
 " key mappings (moves)
 " - Move cursor by display line
