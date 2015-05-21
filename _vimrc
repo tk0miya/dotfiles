@@ -124,6 +124,7 @@ set autoread                        " Auto reload file if buffer is not changed
 set autoindent                      " Do auto indent
 set smartindent                     " Do auto indent
 set backspace=indent,eol            " Allow removing indents and EOLs by backspace
+set completeopt=menuone             " Use popup menu for completion if there is only one match
 set splitbelow                      " Put a new window below the current one when opening it
 
 " key mappings (moves)
