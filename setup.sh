@@ -1,11 +1,11 @@
 #!/bin/sh
 
 if [ `hostname` = "deneb" ]; then
-    REGULAR_PYTHON_VERSIONS="2.7.9 2.5.6 2.6.9 3.2.6 3.3.6 3.4.3"
+    REGULAR_PYTHON_VERSIONS="2.7.10 2.5.6 2.6.9 3.2.6 3.3.6 3.4.3"
 elif [ `hostname` = "capella" ]; then
-    REGULAR_PYTHON_VERSIONS="2.7.9 3.4.3"
+    REGULAR_PYTHON_VERSIONS="2.7.10 3.4.3"
 else
-    REGULAR_PYTHON_VERSIONS="2.7.9"
+    REGULAR_PYTHON_VERSIONS="2.7.10"
 fi
 
 mkdir -p $HOME/bin
