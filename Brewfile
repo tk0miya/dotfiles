@@ -14,6 +14,7 @@ install s3cmd
 install freetype
 install gettext
 install git
+install go
 install graphviz
 install hub
 install imagemagick --with-librsvg

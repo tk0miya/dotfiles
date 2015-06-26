@@ -52,6 +52,7 @@ fpath=($HOME/.zsh/completion $fpath)
 
 export EDITOR=vim
 export PIP_FIND_LINKS=$HOME/.pip/wheel
+export GOPATH=$HOME/.golang
 
 # Set locale
 export LANG=ja_JP.UTF-8

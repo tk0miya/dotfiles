@@ -142,3 +142,7 @@ if [ -d _hgext/hgbb ]; then
 else
     (cd _hgext && hg clone https://bitbucket.org/birkenfeld/hgbb)
 fi
+
+echo ""
+echo "Setup go environments ..."
+go get -u github.com/nsf/gocode
