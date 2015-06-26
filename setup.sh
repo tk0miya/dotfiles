@@ -145,4 +145,5 @@ fi
 
 echo ""
 echo "Setup go environments ..."
+go get -u github.com/golang/lint/golint
 go get -u github.com/nsf/gocode

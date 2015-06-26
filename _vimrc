@@ -12,6 +12,7 @@ NeoBundle 'szw/vim-tags'                        " Control ctags
 NeoBundle 'alfredodeza/khuno.vim'               " Lint with flake8
 NeoBundle 'hynek/vim-python-pep8-indent'        " PEP8 based auto indentation
 NeoBundle 'Shougo/neocomplete.vim'              " Auto completion
+NeoBundle 'vim-jp/vim-go-extra'                 " Auto completion for golang
 NeoBundle 'marcus/rsense'                       " Ruby development helper
 NeoBundle 'supermomonga/neocomplete-rsense.vim' " rsense plugin for neocomplete
 NeoBundle 'tpope/vim-endwise'                   " Auto complete 'end' keyword (in Ruby)
@@ -77,11 +78,22 @@ if neobundle#is_installed('vim-watchdogs')
   \  "hook/qfstatusline_update/priority_exit" : 4,
   \}
 
+  let g:quickrun_config['watchdogs_checker/golint'] = {
+  \  "command" :     "golint",
+  \  "exec" :        "%c %o %s:p",
+  \  "errorformat" : "%f:%l:%c: %m,%-G%.%#",
+  \}
+
   let g:quickrun_config["ruby/watchdogs_checker"] = {
   \  "type" : "watchdogs_checker/rubocop"
   \}
 
+  let g:quickrun_config["go/watchdogs_checker"] = {
+  \  "type" : "watchdogs_checker/golint"
+  \}
+
   let g:watchdogs_check_CursorHold_enables = {
+  \  "go" : 1,
   \  "ruby" : 1
   \}
   call watchdogs#setup(g:quickrun_config)
