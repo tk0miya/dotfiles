@@ -20,7 +20,7 @@ if [ `uname -s` = "Darwin" ]; then
     fi
 
     brew tap homebrew/boneyard
-    brew bundle
+    brew bundle-old
     PATH=/usr/local/bin:$PATH
 
     echo ""
