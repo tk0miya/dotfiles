@@ -16,7 +16,7 @@ if [ `uname -s` = "Darwin" ]; then
     if [ -x /usr/local/bin/brew ]; then
         (cd `brew --prefix` && git pull origin master)
     else
-        ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     fi
 
     brew tap homebrew/boneyard
