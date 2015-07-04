@@ -9,6 +9,7 @@ else
 fi
 
 mkdir -p $HOME/bin
+mkdir -p $HOME/.pip/wheel
 
 if [ `uname -s` = "Darwin" ]; then
     echo ""
