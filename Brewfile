@@ -33,7 +33,6 @@ cleanup
 # cask packages
 cask update
 
-cask install adium
 cask install alfred
 cask install appcleaner
 cask install chrome-remote-desktop-host
