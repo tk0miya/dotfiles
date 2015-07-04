@@ -140,7 +140,7 @@ echo "Setup hg extensions ..."
 if [ -d _hgext/hgbb ]; then
     (cd _hgext/hgbb && hg update)
 else
-    (cd _hgext && hg clone https://bitbucket.org/birkenfeld/hgbb)
+    (cd _hgext && hg clone https://bitbucket.org/seanfarley/hgbb)
 fi
 
 echo ""

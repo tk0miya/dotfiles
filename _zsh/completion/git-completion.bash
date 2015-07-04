@@ -1108,7 +1108,7 @@ _git_commit ()
 
 	case "$cur" in
 	--cleanup=*)
-		__gitcomp "default strip verbatim whitespace
+		__gitcomp "default scissors strip verbatim whitespace
 			" "" "${cur##--cleanup=}"
 		return
 		;;
@@ -2282,6 +2282,11 @@ _git_reset ()
 
 _git_revert ()
 {
+	local dir="$(__gitdir)"
+	if [ -f "$dir"/REVERT_HEAD ]; then
+		__gitcomp "--continue --quit --abort"
+		return
+	fi
 	case "$cur" in
 	--*)
 		__gitcomp "--edit --mainline --no-edit --no-commit --signoff"
