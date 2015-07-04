@@ -19,6 +19,7 @@ path=(
     /usr/bin(N-/)
     /usr/local/texlive/2013/bin/x86_64-darwin(N-/)
     /usr/local/texlive/2014/bin/x86_64-darwin(N-/)
+    /usr/local/texlive/2015/bin/x86_64-darwin(N-/)
     /bin(N-/)
     /usr/sbin(N-/)
     /sbin(N-/)
