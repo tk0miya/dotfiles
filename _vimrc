@@ -181,6 +181,9 @@ if !exists('g:neocomplete#force_omni_input_patterns')
   let g:neocomplete#force_omni_input_patterns = {}
 endif
 
+" Disable auto folding for markdown files
+let g:vim_markdown_folding_disabled=1
+
 filetype plugin on
 filetype plugin indent on
 
