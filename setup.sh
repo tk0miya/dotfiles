@@ -1,9 +1,9 @@
 #!/bin/sh
 
 if [ `hostname` = "deneb" ]; then
-    REGULAR_PYTHON_VERSIONS="2.7.10 2.5.6 2.6.9 3.2.6 3.3.6 3.4.3"
+    REGULAR_PYTHON_VERSIONS="2.7.10 2.5.6 2.6.9 3.2.6 3.3.6 3.4.3 3,5.0"
 elif [ `hostname` = "capella" ]; then
-    REGULAR_PYTHON_VERSIONS="2.7.10 3.4.3"
+    REGULAR_PYTHON_VERSIONS="2.7.10 3.5.0"
 else
     REGULAR_PYTHON_VERSIONS="2.7.10"
 fi
@@ -79,12 +79,12 @@ ln -sF $PWD/lib/rbenv/plugins/rbenv-ctags _rbenv/plugins
 
 PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
-for version in 1.9.3-p550 2.2.2; do
+for version in 1.9.3-p550 2.2.3; do
     if [ ! -d "$HOME/.rbenv/versions/$version" ]; then
         rbenv install $version
     fi
 done
-rbenv global 2.2.2
+rbenv global 2.2.3
 gem install bundler gist refe2
 gem update
 bitclust update
@@ -109,13 +109,13 @@ ln -sF $PWD/lib/plenv/plugins/perl-build _plenv/plugins
 
 PATH=$HOME/.plenv/bin:$PATH
 eval "$(plenv init -)"
-for version in 5.21.11; do
+for version in 5.23.4; do
     if [ ! -d "$HOME/.plenv/versions/$version" ]; then
         plenv install $version -Dusethreads
         plenv install-cpanm
     fi
 done
-plenv global 5.21.11
+plenv global 5.23.4
 
 echo ""
 echo "Setup ndenv ..."
@@ -124,12 +124,12 @@ ln -sF $PWD/lib/ndenv/plugins/node-build _ndenv/plugins
 
 PATH=$HOME/.ndenv/bin:$PATH
 eval "$(ndenv init -)"
-for version in v0.12.2; do
+for version in v5.0.0; do
     if [ ! -d "$HOME/.ndenv/versions/$version" ]; then
         ndenv install $version
     fi
 done
-ndenv global v0.12.2
+ndenv global v5.0.0
 
 echo ""
 echo "Setup python environments ..."
