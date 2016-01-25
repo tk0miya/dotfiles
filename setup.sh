@@ -124,12 +124,12 @@ ln -sF $PWD/lib/ndenv/plugins/node-build _ndenv/plugins
 
 PATH=$HOME/.ndenv/bin:$PATH
 eval "$(ndenv init -)"
-for version in v5.0.0; do
+for version in v0.12.9 v5.5.0; do
     if [ ! -d "$HOME/.ndenv/versions/$version" ]; then
         ndenv install $version
     fi
 done
-ndenv global v5.0.0
+ndenv global v5.5.0
 
 echo ""
 echo "Setup python environments ..."
