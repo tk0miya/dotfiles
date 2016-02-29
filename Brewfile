@@ -8,7 +8,6 @@ tap caskroom/homebrew-versions
 # packages
 install Caskroom/cask/xquartz
 install ascii
-install brew-cask
 install ctags
 install s3cmd
 install freetype
