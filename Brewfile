@@ -22,6 +22,7 @@ install jq
 install openssl
 install pandoc
 install rsense
+install slack
 install ssh-copy-id
 install vim --with-lua --HEAD
 
