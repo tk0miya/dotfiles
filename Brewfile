@@ -49,7 +49,6 @@ cask install keyremap4macbook
 cask install mactex
 cask install mplayerx
 cask install opera
-cask install remote-desktop-connection
 cask install skype
 cask install slack
 cask install sourcetree
