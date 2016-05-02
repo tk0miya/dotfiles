@@ -56,5 +56,4 @@ cask install the-unarchiver
 cask install vagrant
 cask install virtualbox
 
-cask alfred link
 cask cleanup
