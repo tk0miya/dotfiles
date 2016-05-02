@@ -22,7 +22,6 @@ install jq
 install openssl
 install pandoc
 install rsense
-install slack
 install ssh-copy-id
 install vim --with-lua --HEAD
 
@@ -52,6 +51,7 @@ cask install mplayerx
 cask install opera
 cask install remote-desktop-connection
 cask install skype
+cask install slack
 cask install sourcetree
 cask install the-unarchiver
 cask install vagrant
