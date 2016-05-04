@@ -45,7 +45,7 @@ cask install google-japanese-ime
 cask install iterm2
 cask install java
 cask install karabiner
-cask install keepassx0
+cask install keepassx
 cask install mactex
 cask install mplayerx
 cask install opera
