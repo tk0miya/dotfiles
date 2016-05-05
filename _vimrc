@@ -14,7 +14,7 @@ NeoBundle 'hynek/vim-python-pep8-indent'        " PEP8 based auto indentation
 NeoBundle 'Shougo/neocomplete.vim'              " Auto completion
 NeoBundle 'vim-jp/vim-go-extra'                 " Auto completion for golang
 NeoBundle 'marcus/rsense'                       " Ruby development helper
-NeoBundle 'supermomonga/neocomplete-rsense.vim' " rsense plugin for neocomplete
+"NeoBundle 'supermomonga/neocomplete-rsense.vim' " rsense plugin for neocomplete
 NeoBundle 'tpope/vim-endwise'                   " Auto complete 'end' keyword (in Ruby)
 NeoBundle 'nishigori/increment-activator'       " Enhance increment/decrement feature
 NeoBundle 'thinca/vim-ref'                      " Reference viewer
