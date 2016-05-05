@@ -13,3 +13,10 @@ $ sh setup.sh
 $ exec zsh
 $ sh setup.sh
 ```
+
+### Manually settings
+
+iTerm2
+------
+
+In `[Preferences] > [General]`, put `/path/to/.iTerm2` to custom folder for preferences
