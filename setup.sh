@@ -109,13 +109,13 @@ ln -sF $PWD/lib/plenv/plugins/perl-build _plenv/plugins
 
 PATH=$HOME/.plenv/bin:$PATH
 eval "$(plenv init -)"
-for version in 5.23.4; do
+for version in 5.23.9; do
     if [ ! -d "$HOME/.plenv/versions/$version" ]; then
         plenv install $version -Dusethreads
         plenv install-cpanm
     fi
 done
-plenv global 5.23.4
+plenv global 5.23.9
 
 echo ""
 echo "Setup ndenv ..."
