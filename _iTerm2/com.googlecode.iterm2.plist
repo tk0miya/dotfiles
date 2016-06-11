@@ -81,7 +81,7 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>MaxVertically</key>
-	<true/>
+	<false/>
 	<key>NSNavLastRootDirectory</key>
 	<string>~</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -123,7 +123,9 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>256 198 924 485 0 0 1366 745 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 169 810 576 0 0 1366 745 </string>
+	<string>0 81 1350 664 0 0 1366 745 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>169 100 825 576 0 0 1366 745 </string>
 	<key>NeverWarnAboutShortLivedSessions_0A6F9BBB-8A25-4FC7-A769-93AB21952C75</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -346,7 +348,7 @@
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
-			<string>No</string>
+			<string>Recycle</string>
 			<key>Default Bookmark</key>
 			<string>No</string>
 			<key>Disable Printing</key>
@@ -871,7 +873,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>484137804.81888998</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>484137804.81997597</real>
+	<real>487204443.20305097</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -938,7 +940,9 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-05-05T10:30:39Z</date>
+	<date>2016-06-09T22:21:16Z</date>
+	<key>SUSkippedVersion</key>
+	<string>3.0.0</string>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -974,7 +978,7 @@
 	<key>WebKitDefaultFontSize</key>
 	<integer>11</integer>
 	<key>WebKitStandardFont</key>
-	<string>.Lucida Grande UI</string>
+	<string>.AppleSystemUIFont</string>
 	<key>WindowNumber</key>
 	<true/>
 	<key>WindowStyle</key>
