@@ -14,6 +14,7 @@ install freetype
 install gettext
 install git
 install go
+install gpg
 install graphviz
 install hub
 install imagemagick --with-librsvg
