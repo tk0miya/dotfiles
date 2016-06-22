@@ -18,6 +18,8 @@
 	diff = diff-highlight | less -+S
 [init]
 	templatedir = ~/.git_template
+[diff]
+	compactionHeuristic = true
 [alias]
 	ci = commit
 	co = checkout
