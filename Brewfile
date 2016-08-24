@@ -50,6 +50,7 @@ cask install keepassx
 cask install mactex
 cask install mplayerx
 cask install opera
+cask install silverlight
 cask install skype
 cask install slack
 cask install sourcetree
