@@ -194,6 +194,9 @@ augroup vimrc
   " (this setting should be enable after filetype plugin)
   autocmd Filetype * set formatoptions-=ro
 
+  " CHANGES of Sphinx should be folded with 80 columns
+  autocmd BufRead,BufNewFile CHANGES let &colorcolumn=join(range(81,255),",")
+
   " Jump to last position on the file
   autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 augroup END
