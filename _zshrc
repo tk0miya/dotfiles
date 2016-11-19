@@ -54,6 +54,7 @@ export EDITOR=vim
 export PIP_FIND_LINKS=$HOME/.pip/wheel
 export GOPATH=$HOME/.golang
 export RUBYGEMS_GEMDEPS=-  # Apply Gemfile automatically
+export LESS='-i -M -R -z-4 -x4'
 
 # Set locale
 export LANG=ja_JP.UTF-8
