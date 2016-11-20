@@ -10,6 +10,7 @@ install Caskroom/cask/xquartz
 install ascii
 install ctags
 install s3cmd
+install epubcheck
 install freetype
 install gettext
 install git
