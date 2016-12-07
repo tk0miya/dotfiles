@@ -12,7 +12,6 @@ mq =
 pager =
 shelve =
 histedit =
-hgbb = $HOME/.hgext/hgbb/hgbb.py
 diff_highlight =
 
 [pager]
