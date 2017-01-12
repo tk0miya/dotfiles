@@ -54,7 +54,6 @@ cask install opera
 cask install silverlight
 cask install skype
 cask install slack
-cask install sourcetree
 cask install the-unarchiver
 cask install vagrant
 cask install virtualbox
