@@ -164,7 +164,21 @@ nmap g# g#zz
 
 " Enable 256 colors FORCELY on screen
 if $TERM == 'screen'
-    set t_Co=256
+  set t_Co=256
+endif
+
+" Disable auto indent on pasting from clipboard
+if &term =~ "xterm"
+  let &t_SI .= "\e[?2004h"
+  let &t_EI .= "\e[?2004l"
+  let &pastetoggle = "\e[201~"
+
+  function XTermPasteBegin(ret)
+    set paste
+    return a:ret
+  endfunction
+
+  inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
 endif
 
 " Enable colorscheme
