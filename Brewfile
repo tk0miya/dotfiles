@@ -25,7 +25,7 @@ install openssl
 install pandoc
 install rsense
 install ssh-copy-id
-install vim --with-lua --HEAD
+install vim --with-lua --with-python3 --HEAD
 
 link gettext --force
 

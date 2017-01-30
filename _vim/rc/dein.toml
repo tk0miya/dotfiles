@@ -5,6 +5,14 @@ hook_add = '''
   autocmd VimEnter * call dein#call_hook('post_source')
 '''
 
+# United interface
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+
+# MRU plugin for denite.nvim
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+
 # Control ctags
 [[plugins]]
 repo = 'szw/vim-tags'

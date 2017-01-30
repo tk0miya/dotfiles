@@ -87,6 +87,14 @@ nmap * *zz
 nmap # #zz
 nmap g* g*zz
 nmap g# g#zz
+" - call Denite.nvim
+nnoremap [unite] <Nop>
+nmap <C-g> [unite]
+nnoremap <silent> [unite]<C-b>  :<C-u>Denite buffer<CR>
+nnoremap <silent> [unite]<C-f>  :<C-u>Denite file_rec<CR>
+nnoremap <silent> [unite]<C-g>  :<C-u>Denite buffer<CR>
+nnoremap <silent> [unite]<C-m>  :<C-u>Denite file_mru<CR>
+nnoremap <silent> [unite]<C-u>  :<C-u>Denite buffer file_mru<CR>
 
 " Enable 256 colors FORCELY on screen
 if $TERM == 'screen'

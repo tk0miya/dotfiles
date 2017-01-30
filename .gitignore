@@ -1,3 +1,5 @@
+*.swp
+
 _hgext/hgbb
 _vim/dein
 _vim/.netrwhist
