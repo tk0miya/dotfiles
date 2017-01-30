@@ -69,7 +69,7 @@ curl -sS -L -o _zsh/completion/_hub https://raw.githubusercontent.com/github/hub
 
 echo ""
 echo "Setup vim extensions ..."
-_vim/bundle/neobundle.vim/bin/neoinstall
+vim -N -u $HOME/.vimrc -c 'qall!' -U NONE -i NONE -V1 -e -s
 
 echo ""
 echo "Setup rbenv ..."

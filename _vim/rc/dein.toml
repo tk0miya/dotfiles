@@ -1,0 +1,189 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+hook_add = '''
+  " Invoke post_source hooks on bootstrap
+  autocmd VimEnter * call dein#call_hook('post_source')
+'''
+
+# Control ctags
+[[plugins]]
+repo = 'szw/vim-tags'
+
+# Lint with flake8
+[[plugins]]
+repo = 'alfredodeza/khuno.vim'
+
+# PEP8 based auto indentation
+[[plugins]]
+repo = 'hynek/vim-python-pep8-indent'
+
+# Auto completion
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+hook_add = '''
+  let g:neocomplete#enable_at_startup = 1             " Enable neocomplete at startup
+  let g:neocomplete#enable_smart_case = 1             " Case sensitive search if pattern contains CAPITAL chars
+  let g:neocomplete#enable_auto_close_preview = 1     " Close preview automatically
+  if !exists('g:neocomplete#force_omni_input_patterns')
+    let g:neocomplete#force_omni_input_patterns = {}
+  endif
+'''
+
+# Auto completion for golang
+[[plugins]]
+repo = 'vim-jp/vim-go-extra'
+
+# Ruby development helper
+#[[plugins]]
+#repo = 'marcus/rsense'
+
+# rsense plugin for neocomplete
+#[[plugins]]
+#repo = 'supermomonga/neocomplete-rsense.vim'
+
+# Auto complete 'end' keyword (in Ruby)
+[[plugins]]
+repo = 'tpope/vim-endwise'
+
+# Enhance increment/decrement feature
+[[plugins]]
+repo = 'nishigori/increment-activator'
+
+# Reference viewer
+[[plugins]]
+repo = 'thinca/vim-ref'
+
+# Ruby plugin for vim-ref
+[[plugins]]
+repo = 'yuku-t/vim-ref-ri'
+
+# Customize status line
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+  let g:lightline = {
+  \  'mode_map': {'c': 'NORMAL'},
+  \  'active': {
+  \    'right': [
+  \      [ 'syntaxcheck' ],
+  \    ]
+  \  },
+  \  'component_expand': {
+  \    'syntaxcheck': 'qfstatusline#Update',
+  \  },
+  \  'component_type': {
+  \    'syntaxcheck': 'error',
+  \  },
+  \}
+'''
+
+# Colorscheme
+[[plugins]]
+repo = 'nanotech/jellybeans.vim'
+
+# Colorscheme
+[[plugins]]
+repo = 'w0ng/vim-hybrid'
+
+# Asynchronous execution
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+hook_post_update = '''
+  if dein#util#_is_windows()
+    let cmd = 'tools\\update-dll-mingw'
+  elseif dein#util#_is_cygwin()
+    let cmd = 'make -f make_cygwin.mak'
+  elseif executable('gmake')
+    let cmd = 'gmake'
+  else
+    let cmd = 'make'
+  endif
+  let g:dein#plugin.build = cmd
+'''
+
+# Command runner
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+hook_add = '''
+  if !exists("g:quickrun_config")
+    let g:quickrun_config = {}
+  endif
+  let g:quickrun_config["_"] = {
+  \  "runner" : "vimproc",
+  \  "runner/vimproc/sleep": 5,
+  \  "runner/vimproc/updatetime" : 20,
+  \  "runner/vimproc/read_timeout" : 1,
+  \}
+'''
+
+# plugins for quickrun
+[[plugins]]
+repo = 'osyo-manga/shabadou.vim'
+
+# syntax checker plugin for quickrun
+[[plugins]]
+repo = 'osyo-manga/vim-watchdogs'
+depends = ['vim-quickrun']
+hook_add = '''
+  let g:quickrun_config["watchdogs_checker/_"] = {
+  \  "outputter/quickfix/open_cmd" : "",
+  \  "hook/qfstatusline_update/enable_exit" : 1,
+  \  "hook/qfstatusline_update/priority_exit" : 4,
+  \}
+
+  let g:quickrun_config['watchdogs_checker/golint'] = {
+  \  "command" :     "golint",
+  \  "exec" :        "%c %o %s:p",
+  \  "errorformat" : "%f:%l:%c: %m,%-G%.%#",
+  \}
+
+  let g:quickrun_config["ruby/watchdogs_checker"] = {
+  \  "type" : "watchdogs_checker/rubocop"
+  \}
+
+  let g:quickrun_config["go/watchdogs_checker"] = {
+  \  "type" : "watchdogs_checker/golint"
+  \}
+
+  let g:watchdogs_check_CursorHold_enables = {
+  \  "go" : 1,
+  \  "ruby" : 1
+  \}
+'''
+hook_post_source = '''
+  call watchdogs#setup(g:quickrun_config)
+'''
+
+# Highlights quickfix errors
+[[plugins]]
+repo = 'cohama/vim-hier'
+
+# Show quickfix error message for current line
+[[plugins]]
+repo = 'dannyob/quickfixstatus'
+
+# Show quickfix status to status-line
+[[plugins]]
+repo = 'KazuakiM/vim-qfstatusline'
+depends = ['lightline.vim', 'vim-watchdogs']
+hook_add = '''
+  " Callback lightline#update after :WatchdogsRun
+  let g:Qfstatusline#Text = 0
+  let g:Qfstatusline#UpdateCmd = function('lightline#update')
+'''
+
+# Utilities for Ruby on Rails
+[[plugins]]
+repo = 'tpope/vim-rails'
+
+# Syntax highlighting for markdown
+[[plugins]]
+repo = 'rcmdnk/vim-markdown'
+hook_add = '''
+  " Disable auto folding for markdown files
+  let g:vim_markdown_folding_disabled=1
+'''
+
+# Syntax highlighting for code-blocks in markdown
+[[plugins]]
+repo = 'joker1007/vim-markdown-quote-syntax'

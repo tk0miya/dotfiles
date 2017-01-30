@@ -1,107 +1,33 @@
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+" Enable dein
+let s:dein_dir = expand('~/.vim/dein')
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+
+if &runtimepath !~# '/dein.vim'
+  if !isdirectory(s:dein_repo_dir)
+    execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
+  endif
+  execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
 endif
 
-call neobundle#begin(expand('~/.vim/bundle/'))
+" Plugin settings
+if dein#load_state(s:dein_dir)
+  call dein#begin(s:dein_dir)
 
-" Let NeoBundle manage NeoBundle
-NeoBundleFetch 'Shougo/neobundle.vim'
+  let g:rc_dir    = expand('~/.vim/rc')
+  let s:toml      = g:rc_dir . '/dein.toml'
+  let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
 
-" add plugins
-NeoBundle 'szw/vim-tags'                        " Control ctags
-NeoBundle 'alfredodeza/khuno.vim'               " Lint with flake8
-NeoBundle 'hynek/vim-python-pep8-indent'        " PEP8 based auto indentation
-NeoBundle 'Shougo/neocomplete.vim'              " Auto completion
-NeoBundle 'vim-jp/vim-go-extra'                 " Auto completion for golang
-NeoBundle 'marcus/rsense'                       " Ruby development helper
-"NeoBundle 'supermomonga/neocomplete-rsense.vim' " rsense plugin for neocomplete
-NeoBundle 'tpope/vim-endwise'                   " Auto complete 'end' keyword (in Ruby)
-NeoBundle 'nishigori/increment-activator'       " Enhance increment/decrement feature
-NeoBundle 'thinca/vim-ref'                      " Reference viewer
-NeoBundle 'yuku-t/vim-ref-ri'                   " Ruby plugin for vim-ref
-NeoBundle 'itchyny/lightline.vim'               " Customize status line
-NeoBundle 'nanotech/jellybeans.vim'             " Colorscheme
-NeoBundle 'w0ng/vim-hybrid'                     " Colorscheme
-NeoBundle 'Shougo/vimproc.vim', {
-\           'build' : {
-\             'windows' : 'tools\\update-dll-mingw',
-\             'cygwin' : 'make -f make_cygwin.mak',
-\             'mac' : 'make -f make_mac.mak',
-\             'linux' : 'make',
-\             'unix' : 'gmake',
-\           },
-\         }                                     " Asynchronous execution
-NeoBundle "thinca/vim-quickrun"                 " Command runner
-NeoBundle "osyo-manga/shabadou.vim"             " plugins for quickrun
-NeoBundle "osyo-manga/vim-watchdogs"            " syntax checker plugin for quickrun
-NeoBundle "cohama/vim-hier"                     " Highlights quickfix errors
-NeoBundle "dannyob/quickfixstatus"              " Show quickfix error message for current line
-NeoBundle "KazuakiM/vim-qfstatusline"           " Show quickfix status to status-line
-NeoBundle "tpope/vim-rails"                     " Utilities for Ruby on Rails
-NeoBundle 'rcmdnk/vim-markdown'                 " Syntax highlighting for markdown
-NeoBundle 'joker1007/vim-markdown-quote-syntax' " Syntax highlighting for code-blocks in markdown
+  call dein#load_toml(s:toml,      {'lazy': 0})
+  call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
-call neobundle#end()
-
-" lightline (status-line)
-let g:lightline = {
-\  'mode_map': {'c': 'NORMAL'},
-\  'active': {
-\    'right': [
-\      [ 'syntaxcheck' ],
-\    ]
-\  },
-\  'component_expand': {
-\    'syntaxcheck': 'qfstatusline#Update',
-\  },
-\  'component_type': {
-\    'syntaxcheck': 'error',
-\  },
-\}
-
-" Setup quickrun
-if !exists("g:quickrun_config")
-  let g:quickrun_config = {}
-endif
-let g:quickrun_config["_"] = {
-\  "runner" : "vimproc",
-\  "runner/vimproc/sleep": 5,
-\  "runner/vimproc/updatetime" : 20,
-\  "runner/vimproc/read_timeout" : 1,
-\}
-
-" Setup watchdogs
-if neobundle#is_installed('vim-watchdogs')
-  let g:quickrun_config["watchdogs_checker/_"] = {
-  \  "outputter/quickfix/open_cmd" : "",
-  \  "hook/qfstatusline_update/enable_exit" : 1,
-  \  "hook/qfstatusline_update/priority_exit" : 4,
-  \}
-
-  let g:quickrun_config['watchdogs_checker/golint'] = {
-  \  "command" :     "golint",
-  \  "exec" :        "%c %o %s:p",
-  \  "errorformat" : "%f:%l:%c: %m,%-G%.%#",
-  \}
-
-  let g:quickrun_config["ruby/watchdogs_checker"] = {
-  \  "type" : "watchdogs_checker/rubocop"
-  \}
-
-  let g:quickrun_config["go/watchdogs_checker"] = {
-  \  "type" : "watchdogs_checker/golint"
-  \}
-
-  let g:watchdogs_check_CursorHold_enables = {
-  \  "go" : 1,
-  \  "ruby" : 1
-  \}
-  call watchdogs#setup(g:quickrun_config)
+  call dein#end()
+  call dein#save_state()
 endif
 
-" Callback lightline#update after :WatchdogsRun
-let g:Qfstatusline#Text = 0
-let g:Qfstatusline#UpdateCmd = function('lightline#update')
+" もし、未インストールものものがあったらインストール
+if dein#check_install()
+  call dein#install()
+endif
 
 " highlight Zenkaku spaces
 augroup highlightDoubleByteSpace
@@ -182,21 +108,10 @@ if &term =~ "xterm"
 endif
 
 " Enable colorscheme
-if neobundle#is_installed('jellybeans.vim')
+if dein#tap('jellybeans.vim')
   colorscheme jellybeans
 endif
 syntax on
-
-" Enable neocomplete
-let g:neocomplete#enable_at_startup = 1             " Enable neocomplete at startup
-let g:neocomplete#enable_smart_case = 1             " Case sensitive search if pattern contains CAPITAL chars
-let g:neocomplete#enable_auto_close_preview = 1     " Close preview automatically
-if !exists('g:neocomplete#force_omni_input_patterns')
-  let g:neocomplete#force_omni_input_patterns = {}
-endif
-
-" Disable auto folding for markdown files
-let g:vim_markdown_folding_disabled=1
 
 filetype plugin on
 filetype plugin indent on
@@ -219,5 +134,3 @@ augroup END
 function! s:choice_from_neocomplete()
   return pumvisible() ? neocomplete#close_popup() : "\<CR>"
 endfunction
-
-NeoBundleCheck
