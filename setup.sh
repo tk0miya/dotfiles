@@ -91,8 +91,6 @@ bitclust update
 
 echo ""
 echo "Setup pyenv ..."
-ln -sF $PWD/lib/pyenv/plugins/python-virtualenv _pyenv/plugins
-
 PATH=$HOME/.pyenv/bin:$PATH
 eval "$(pyenv init -)"
 for version in $REGULAR_PYTHON_VERSIONS; do

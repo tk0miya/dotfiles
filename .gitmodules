@@ -10,9 +10,6 @@
 [submodule "_pyenv"]
 	path = _pyenv
 	url = https://github.com/yyuu/pyenv
-[submodule "lib/pyenv/plugins/python-virtualenv"]
-	path = lib/pyenv/plugins/python-virtualenv
-	url = https://github.com/yyuu/python-virtualenv
 [submodule "_plenv"]
 	path = _plenv
 	url = https://github.com/tokuhirom/plenv
