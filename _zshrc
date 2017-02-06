@@ -46,7 +46,7 @@ if [ -d $HOME/.ndenv ]; then
     eval "$(ndenv init - --no-rehash)"
 fi
 
-typeset -u PATH  # keep $PATH unique
+typeset -u path  # keep $PATH unique
 
 fpath=($HOME/.zsh/completion $fpath)
 
