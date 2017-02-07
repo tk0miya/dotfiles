@@ -21,6 +21,7 @@ install hub
 install imagemagick --with-librsvg
 install jpeg
 install jq
+install mercurial
 install openssl
 install pandoc
 install rsense

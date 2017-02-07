@@ -1,11 +1,11 @@
 #!/bin/sh
 
 if [ `hostname` = "deneb.local" ]; then
-    REGULAR_PYTHON_VERSIONS="2.7.13 2.6.9 3.6.0 3.5.2 3.4.5 3.3.6"
+    REGULAR_PYTHON_VERSIONS="3.6.0 3.5.2 3.4.5 3.3.6 2.7.13 2.6.9"
 elif [ `hostname` = "capella" ]; then
-    REGULAR_PYTHON_VERSIONS="2.7.13 3.6.0 3.5.2"
+    REGULAR_PYTHON_VERSIONS="3.6.0 2.7.13"
 else
-    REGULAR_PYTHON_VERSIONS="2.7.13"
+    REGULAR_PYTHON_VERSIONS="3.6.0"
 fi
 
 mkdir -p $HOME/bin
@@ -132,7 +132,7 @@ ndenv global v6.1.0
 echo ""
 echo "Setup python environments ..."
 pip install --upgrade setuptools
-pip install --upgrade pip mercurial detox flake8 diff-highlight wheel docutils
+pip install --upgrade pip detox flake8 diff-highlight wheel docutils
 
 echo ""
 echo "Setup hg extensions ..."
