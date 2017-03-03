@@ -40,6 +40,7 @@ cask install appcleaner
 cask install chrome-remote-desktop-host
 cask install clamxav
 cask install dash
+cask install docker
 cask install dropbox
 cask install firefox
 cask install google-chrome
