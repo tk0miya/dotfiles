@@ -4,6 +4,7 @@ upgrade
 # add repositories
 tap caskroom/cask
 tap caskroom/homebrew-versions
+tap buo/cask-upgrade
 
 # packages
 install Caskroom/cask/xquartz
@@ -33,8 +34,6 @@ link gettext --force
 cleanup
 
 # cask packages
-cask update
-
 cask install alfred
 cask install appcleaner
 cask install chrome-remote-desktop-host
@@ -61,4 +60,6 @@ cask install the-unarchiver
 cask install vagrant
 cask install virtualbox
 
+# upgrade cask packages through buo/cask-upgrade
+cu -y
 cask cleanup
