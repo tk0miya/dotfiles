@@ -20,8 +20,12 @@ if [ `uname -s` = "Darwin" ]; then
         ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     fi
 
-    brew tap homebrew/boneyard
-    brew bundle-old
+    brew update
+    brew upgrade
+    brew bundle
+    brew cu -y
+    brew cleanup
+    brew cask cleanup
     PATH=/usr/local/bin:$PATH
 
     echo ""

@@ -1,65 +1,88 @@
-update
-upgrade
-
 # add repositories
-tap caskroom/cask
-tap caskroom/homebrew-versions
-tap buo/cask-upgrade
+tap "buo/cask-upgrade"
+tap "caskroom/cask"
+tap "caskroom/versions"
+tap "homebrew/boneyard"
+tap "homebrew/bundle"
+tap "homebrew/core"
 
 # packages
-install Caskroom/cask/xquartz
-install ascii
-install ctags
-install s3cmd
-install epubcheck
-install freetype
-install gettext
-install git
-install go
-install gpg
-install graphviz
-install hub
-install imagemagick --with-librsvg
-install jpeg
-install jq
-install mercurial
-install openssl
-install pandoc
-install rsense
-install ssh-copy-id
-install vim --with-lua --with-python3 --HEAD
-
-link gettext --force
-
-cleanup
+cask "xquartz"
+brew "ascii"
+brew "awscli"
+brew "cabal-install"
+brew "cairo"
+brew "ctags"
+brew "dirmngr"
+brew "epubcheck"
+brew "fontconfig"
+brew "freetype"
+brew "gd"
+brew "gdbm"
+brew "gdk-pixbuf"
+brew "gettext"
+brew "git"
+brew "glib"
+brew "gnupg"
+brew "go"
+brew "gobject-introspection"
+brew "gpg-agent"
+brew "graphviz"
+brew "harfbuzz"
+brew "hub"
+brew "icu4c"
+brew "imagemagick", args: ["with-librsvg"]
+brew "jpeg"
+brew "jq"
+brew "libassuan"
+brew "libcroco"
+brew "libgcrypt"
+brew "libgpg-error"
+brew "libksba"
+brew "librsvg"
+brew "libtool"
+brew "libusb"
+brew "libusb-compat"
+brew "lua"
+brew "mercurial"
+brew "oniguruma"
+brew "openssl"
+brew "pandoc"
+brew "pinentry"
+brew "pixman"
+brew "pkg-config"
+brew "pth"
+brew "s3cmd"
+brew "shared-mime-info"
+brew "ssh-copy-id"
+brew "sshuttle"
+brew "vim", args: ["HEAD", "with-lua", "with-python3"]
 
 # cask packages
-cask install alfred
-cask install appcleaner
-cask install chrome-remote-desktop-host
-cask install clamxav
-cask install dash
-cask install docker
-cask install dropbox
-cask install firefox
-cask install google-chrome
-cask install google-drive
-cask install google-japanese-ime
-cask install iterm2
-cask install java
-cask install karabiner
-cask install keepassx
-cask install mactex
-cask install mplayerx
-cask install opera
-cask install postman
-cask install silverlight
-cask install skype
-cask install slack
-cask install the-unarchiver
-cask install vagrant
-cask install virtualbox
-
-# upgrade cask packages through buo/cask-upgrade
-cu -y
-cask cleanup
+cask "alfred"
+cask "appcleaner"
+cask "charles"
+cask "chrome-remote-desktop-host"
+cask "clamxav"
+cask "dash"
+cask "docker"
+cask "dropbox"
+cask "firefox"
+cask "flash-player"
+cask "google-chrome"
+cask "google-drive"
+cask "google-japanese-ime"
+cask "iterm2"
+cask "java"
+cask "karabiner"
+cask "keepassx"
+cask "mactex"
+cask "mplayerx"
+cask "opera"
+cask "postman"
+cask "silverlight"
+cask "skype"
+cask "slack"
+cask "the-unarchiver"
+cask "vagrant"
+cask "virtualbox"
