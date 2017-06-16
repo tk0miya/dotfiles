@@ -26,3 +26,7 @@
 	di = diff
 	glog = log --graph
 	st = status
+[includeIf "gitdir:~/work/tim/"]
+	path = .git/tim.config
+[includeIf "gitdir:~/work/tim/nh4/"]
+	path = .git/nh4.config
