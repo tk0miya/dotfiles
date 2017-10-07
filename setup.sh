@@ -136,7 +136,7 @@ ndenv global v6.1.0
 echo ""
 echo "Setup python environments ..."
 pip install --upgrade setuptools
-pip install --upgrade pip detox flake8 diff-highlight wheel docutils requests
+pip install --upgrade pip detox flake8 diff-highlight wheel docutils requests mypy
 
 echo ""
 echo "Setup hg extensions ..."
