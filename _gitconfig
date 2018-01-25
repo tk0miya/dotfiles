@@ -16,6 +16,7 @@
 	log = diff-highlight | less -+S
 	show = diff-highlight | less -+S
 	diff = diff-highlight | less -+S
+	branch = cat
 [init]
 	templatedir = ~/.git_template
 [diff]
