@@ -12,7 +12,6 @@ mq =
 pager =
 shelve =
 histedit =
-diff_highlight =
 
 [pager]
 pager = LESS='FRX' less
@@ -41,6 +40,3 @@ opts.sourcetreediff=
 [bb]
 username = tk0miya
 default-method = ssh
-
-[hostfingerprints]
-bitbucket.org = 46:de:34:e7:9b:18:cd:7f:ae:fd:8b:e3:bc:f4:1a:5e:38:d7:ac:24
