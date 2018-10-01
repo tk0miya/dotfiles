@@ -73,7 +73,7 @@ curl -sS -L -o _zsh/completion/_hub https://raw.githubusercontent.com/github/hub
 
 echo ""
 echo "Setup vim extensions ..."
-vim -N -u $HOME/.vimrc -c 'qall!' -U NONE -i NONE -V1 -e -s
+vim -N -u $HOME/.vimrc -c 'call dein#update()' -c 'qall!' -U NONE -i NONE -V1 -e -s
 
 echo ""
 echo "Setup rbenv ..."
