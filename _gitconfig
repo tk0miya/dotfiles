@@ -21,6 +21,8 @@
 	templatedir = ~/.git_template
 [diff]
 	compactionHeuristic = true
+[rebase]
+	autosquash = true
 [alias]
 	ci = commit
 	co = checkout
