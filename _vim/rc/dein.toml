@@ -104,8 +104,6 @@ repo = 'w0ng/vim-hybrid'
 [[plugins]]
 repo = 'w0rp/ale'
 hook_add = '''
-let g:ale_set_loclist = 0       " Disable location list ...
-let g:ale_set_quickfix = 1      " And, enable quickfix instead
 let g:ale_set_signs = 0         " Disable sign column
 '''
 
