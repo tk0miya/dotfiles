@@ -130,3 +130,7 @@ hook_add = '''
 # Syntax highlighting for code-blocks in markdown
 [[plugins]]
 repo = 'joker1007/vim-markdown-quote-syntax'
+
+# Highlighting for CSV files
+[[plugins]]
+repo = 'mechatroner/rainbow_csv'
