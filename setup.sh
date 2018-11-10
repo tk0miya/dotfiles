@@ -34,6 +34,13 @@ if [ `uname -s` = "Darwin" ]; then
         curl -L https://gist.github.com/baopham/1838072/raw/5fa73caa4af86285f11539a6b4b6c26cfca2c04b/Monaco%20for%20Powerline.otf \
             -o "$HOME/Library/Fonts/Monaco for Powerline.otf"
     fi
+
+    echo ""
+    echo "Setup additional headers (Mojave) ..."
+    if [ ! -e /usr/include/zlib.h && \
+        -e /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg ]; then
+        sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
+    fi
 elif [ -e '/etc/redhat-release' ]; then
     sudo yum install curl git screen vim
     curl -LO https://github.com/github/hub/releases/download/v2.2.1/hub-linux-amd64-2.2.1.tar.gz
