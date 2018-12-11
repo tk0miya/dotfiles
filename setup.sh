@@ -90,12 +90,12 @@ ln -sF $PWD/lib/rbenv/plugins/rbenv-ctags _rbenv/plugins
 
 PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
-for version in 1.9.3-p551 2.5.1; do
+for version in 1.9.3-p551 2.5.3; do
     if [ ! -d "$HOME/.rbenv/versions/$version" ]; then
         rbenv install $version
     fi
 done
-rbenv global 2.5.1
+rbenv global 2.5.3
 gem install bundler gist refe2 rubocop
 gem update
 bitclust update

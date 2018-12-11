@@ -74,6 +74,9 @@ noremap k gk
 " - Enable C-a, C-e (like Emacs)
 nnoremap <C-a> ^
 nnoremap <C-e> $
+" - quickfix
+nnoremap <silent> <C-n> :cnext<CR>
+nnoremap <silent> <C-p> :cprevious<CR>
 " - turn off highlights
 nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
 " - choice from neocomplete or send <CR>
