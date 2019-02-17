@@ -133,17 +133,17 @@ ln -sF $PWD/lib/ndenv/plugins/node-build _ndenv/plugins
 
 PATH=$HOME/.ndenv/bin:$PATH
 eval "$(ndenv init -)"
-for version in v10.0.0; do
+for version in v10.15.1; do
     if [ ! -d "$HOME/.ndenv/versions/$version" ]; then
         ndenv install $version
     fi
 done
-ndenv global v10.0.0
+ndenv global v10.15.1
 
 echo ""
 echo "Setup python environments ..."
 pip install --upgrade setuptools
-pip install --upgrade pip detox flake8 diff-highlight wheel docutils requests mypy twine
+pip install --upgrade pip babel detox flake8 diff-highlight wheel docutils requests mypy twine
 
 echo ""
 echo "Setup hg extensions ..."
