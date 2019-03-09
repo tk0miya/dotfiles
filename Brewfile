@@ -2,7 +2,6 @@
 tap "buo/cask-upgrade"
 tap "caskroom/cask"
 tap "caskroom/versions"
-tap "homebrew/boneyard"
 tap "homebrew/bundle"
 tap "homebrew/core"
 
