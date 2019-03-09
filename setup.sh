@@ -23,7 +23,7 @@ if [ `uname -s` = "Darwin" ]; then
     brew update
     brew upgrade
     brew bundle
-    brew cu -y
+    brew cu -a -y
     brew cleanup
     brew cask cleanup
     PATH=/usr/local/bin:$PATH
