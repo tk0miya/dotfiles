@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ `hostname` = "deneb.local" ]; then
-    REGULAR_PYTHON_VERSIONS="3.7.2 3.6.8 3.5.6 3.4.9 3.3.7 2.7.16"
+    REGULAR_PYTHON_VERSIONS="3.7.2 3.6.8 3.5.7 3.4.10 3.3.7 2.7.16"
 elif [ `hostname` = "capella" ]; then
     REGULAR_PYTHON_VERSIONS="3.7.2 2.7.16"
 else
