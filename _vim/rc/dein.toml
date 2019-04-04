@@ -9,8 +9,8 @@ hook_add = '''
 [[plugins]]
 repo = 'Shougo/denite.nvim'
 hook_post_source = '''
-  call denite#custom#alias('source', 'file_rec/git', 'file_rec')
-  call denite#custom#var('file_rec/git', 'command',
+  call denite#custom#alias('source', 'file/rec/git', 'file/rec')
+  call denite#custom#var('file/rec/git', 'command',
   \  ['git', 'ls-files', '-co', '--exclude-standard'])
 '''
 

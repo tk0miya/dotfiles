@@ -94,7 +94,7 @@ nmap g# g#zz
 nnoremap [unite] <Nop>
 nmap <C-g> [unite]
 nnoremap <silent> [unite]<C-b>  :<C-u>Denite buffer<CR>
-nnoremap <silent> [unite]<C-f>  :<C-u>Denite `finddir('.git', ';') != '' ? 'file_rec/git' : 'file_rec'`<CR>
+nnoremap <silent> [unite]<C-f>  :<C-u>Denite `finddir('.git', ';') != '' ? 'file/rec/git' : 'file/rec'`<CR>
 nnoremap <silent> [unite]<C-g>  :<C-u>Denite buffer<CR>
 nnoremap <silent> [unite]<C-m>  :<C-u>Denite file_mru<CR>
 nnoremap <silent> [unite]<C-u>  :<C-u>Denite buffer file_mru<CR>
