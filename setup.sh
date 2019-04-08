@@ -44,8 +44,8 @@ if [ `uname -s` = "Darwin" ]; then
 elif [ -e '/etc/redhat-release' ]; then
     sudo yum install curl git screen vim
     curl -LO https://github.com/github/hub/releases/download/v2.11.1/hub-linux-amd64-2.11.1.tgz
-    tar xf hub-linux-amd64-2.11.1.tar.gz
-    cp hub-linux-amd64-2.11.1/hub $HOME/bin
+    tar xf hub-linux-amd64-2.11.1.tgz
+    cp hub-linux-amd64-2.11.1/bin/hub $HOME/bin
     rm -rf hub-linux-amd64-2.11.1*
 fi
 
