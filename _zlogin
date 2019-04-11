@@ -13,7 +13,7 @@ else
                 export SSH_AUTH_SOCK=$HOME/.ssh/auth_sock
             else
                 eval `ssh-agent -a $HOME/.ssh/auth_sock`
-                ssh-add
+                ssh-add ~/.ssh/id_rsa*(^R)
             fi
         fi
     else
