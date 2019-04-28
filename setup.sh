@@ -143,7 +143,7 @@ ndenv global v10.15.1
 echo ""
 echo "Setup python environments ..."
 pip install --upgrade setuptools
-pip install --upgrade pip babel detox flake8 diff-highlight wheel docutils requests mypy transifex-client twine
+pip install --upgrade pip babel detox flake8 diff-highlight wheel docutils requests mypy transifex-client twine pynvim
 
 echo ""
 echo "Setup hg extensions ..."
