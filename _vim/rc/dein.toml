@@ -14,6 +14,14 @@ hook_post_source = '''
   \  ['git', 'ls-files', '-co', '--exclude-standard'])
 '''
 
+# dependency of denite.nvim
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
+
+# dependency of denite.nvim
+[[plugins]]
+repo = 'roxma/nvim-yarp'
+
 # MRU plugin for denite.nvim
 [[plugins]]
 repo = 'Shougo/neomru.vim'
