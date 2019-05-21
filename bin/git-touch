@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ -z "$1" ]; then
+    COMMIT=HEAD
+else
+    COMMIT=$1
+fi
+git ci --allow-empty -m "`git show -s $COMMIT --format=%B`"
+GIT_EDITOR="vim -N -e -i NONE -u /dev/null --noplugin -c '/^$' -c ':-1' -c ':delete' -c ':0put' -c ':+1 s/pick/fixup/' -c :wq" git rebase -i -k $COMMIT^^
