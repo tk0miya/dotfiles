@@ -99,6 +99,16 @@ nnoremap <silent> [unite]<C-g>  :<C-u>Denite buffer<CR>
 nnoremap <silent> [unite]<C-m>  :<C-u>Denite file_mru<CR>
 nnoremap <silent> [unite]<C-u>  :<C-u>Denite buffer file_mru<CR>
 
+autocmd FileType denite call s:denite_my_settings()
+function! s:denite_my_settings() abort
+  nnoremap <silent><buffer><expr>   <CR>    denite#do_map('do_action')
+  nnoremap <silent><buffer><expr>   <ESC>   denite#do_map('quit')
+  nnoremap <silent><buffer><expr>   q       denite#do_map('quit')
+  nnoremap <silent><buffer>         <C-t>   <Up>
+  nnoremap <silent><buffer>         <C-g>   <Down>
+endfunction
+
+
 " Enable 256 colors FORCELY on screen
 if $TERM == 'screen'
   set t_Co=256
