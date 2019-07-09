@@ -33,3 +33,5 @@
 	path = .git/tim.config
 [includeIf "gitdir:~/work/tim/nh4/"]
 	path = .git/nh4.config
+[includeIf "gitdir:~/work/tim/gw/"]
+	path = .git/tim.bitbucket.config
