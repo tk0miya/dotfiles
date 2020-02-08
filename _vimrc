@@ -64,6 +64,7 @@ set smartindent                     " Do auto indent
 set backspace=indent,eol            " Allow removing indents and EOLs by backspace
 set completeopt=menuone             " Use popup menu for completion if there is only one match
 set splitbelow                      " Put a new window below the current one when opening it
+set belloff=all                     " Disable bell
 
 " key mappings (moves)
 " - Move cursor by display line
