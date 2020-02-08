@@ -43,6 +43,7 @@ brew "libtool"
 brew "libusb"
 brew "libusb-compat"
 brew "lua"
+brew "mas"
 brew "mercurial"
 brew "oniguruma"
 brew "openssl"
@@ -90,3 +91,6 @@ cask "tiat"
 cask "vagrant"
 cask "virtualbox"
 cask "vlc"
+
+# packages on AppStore
+mas "Tweetbot", id: 557168941
