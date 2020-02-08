@@ -35,3 +35,5 @@
 	path = .git/nh4.config
 [includeIf "gitdir:~/work/tim/gw/"]
 	path = .git/tim.bitbucket.config
+[includeIf "gitdir:~/work/tim/shuffle/"]
+	path = .git/tim.bitbucket.config
