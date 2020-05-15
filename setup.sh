@@ -1,9 +1,9 @@
 #!/bin/sh
 
-if [ `hostname` = "deneb.local" ]; then
-    REGULAR_PYTHON_VERSIONS="3.8.1 3.7.5 3.6.9 3.5.8"
+if [ `hostname` = "deneb.local" -o `hostname` = "Alrescha.local" ]; then
+    REGULAR_PYTHON_VERSIONS="3.8.2 3.7.5 3.6.9 3.5.8"
 else
-    REGULAR_PYTHON_VERSIONS="3.8.1"
+    REGULAR_PYTHON_VERSIONS="3.8.2"
 fi
 
 mkdir -p $HOME/bin
@@ -141,7 +141,7 @@ ndenv global v10.15.1
 echo ""
 echo "Setup python environments ..."
 pip install --upgrade setuptools
-pip install --upgrade pip babel flake8 diff-highlight wheel docutils requests mypy tox transifex-client twine pynvim
+pip install --upgrade pip babel flake8 diff-highlight wheel docutils docutils-stubs requests mypy tox transifex-client twine pynvim
 
 echo ""
 echo "Setup hg extensions ..."
