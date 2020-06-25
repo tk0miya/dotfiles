@@ -142,6 +142,7 @@ echo ""
 echo "Setup python environments ..."
 pip install --upgrade setuptools
 pip install --upgrade pip babel flake8 diff-highlight wheel docutils docutils-stubs requests mypy tox transifex-client twine pynvim
+pip install --upgrade sshuttle<1.0
 
 echo ""
 echo "Setup hg extensions ..."

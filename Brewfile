@@ -55,7 +55,7 @@ brew "pth"
 brew "s3cmd"
 brew "shared-mime-info"
 brew "ssh-copy-id"
-brew "sshuttle"
+#brew "sshuttle"
 brew "vim", args: ["HEAD", "with-lua", "with-python3"]
 
 # cask packages
