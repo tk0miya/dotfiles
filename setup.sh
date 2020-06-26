@@ -94,7 +94,7 @@ for version in 1.9.3-p551 2.6.3; do
     fi
 done
 rbenv global 2.6.3
-gem install bundler gist refe2 rubocop
+gem install bundler ec2ssh gist refe2 rubocop
 gem update
 bitclust update
 
