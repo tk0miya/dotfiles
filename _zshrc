@@ -115,4 +115,4 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # known_hosts completion
-_cache_hosts=(alrescha fomalhaut capella $(fgrep 'Host ' ~/.ssh/config | grep -v '*' | awk '{print $2}' | sort))
+_cache_hosts=(alrescha fomalhaut capella $(fgrep 'Host ' ~/.ssh/config | grep -v '*' | grep -v '^#' | awk '{print $2}' | sort))
