@@ -37,3 +37,5 @@
 	path = .git/tim.bitbucket.config
 [includeIf "gitdir:~/work/tim/shuffle/"]
 	path = .git/tim.bitbucket.config
+[pull]
+	rebase = true
