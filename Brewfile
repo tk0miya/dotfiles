@@ -88,6 +88,7 @@ cask "the-unarchiver"
 cask "tiat"
 cask "vagrant"
 cask "virtualbox"
+cask "visual-studio-code"
 cask "vlc"
 
 # packages on AppStore
