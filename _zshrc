@@ -72,6 +72,7 @@ setopt hist_ignore_all_dups     # Remove duplicated command from history if new 
 setopt hist_ignore_space        # Do not record history if command starts with spaces
 setopt hist_reduce_blanks       # Remove superfluous blanks from commands
 setopt hist_no_store            # Do not record 'history' command
+setopt no_beep                  # Disable beep sound
 setopt share_history            # Share history with zsh proceses
 
 # Aliases
