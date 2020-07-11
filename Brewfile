@@ -28,7 +28,7 @@ brew "graphviz"
 brew "harfbuzz"
 brew "hub"
 brew "icu4c"
-brew "imagemagick", args: ["with-librsvg"]
+brew "imagemagick"
 brew "jpeg"
 brew "jq"
 brew "libassuan"
@@ -54,7 +54,7 @@ brew "s3cmd"
 brew "shared-mime-info"
 brew "ssh-copy-id"
 #brew "sshuttle"
-brew "vim", args: ["HEAD", "with-lua", "with-python3"]
+brew "vim"
 
 # cask packages
 cask "alfred"
