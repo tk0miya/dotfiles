@@ -1,7 +1,7 @@
 # add repositories
 tap "buo/cask-upgrade"
-tap "caskroom/cask"
 tap "homebrew/bundle"
+tap "homebrew/cask"
 tap "homebrew/core"
 
 # packages
