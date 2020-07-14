@@ -12,6 +12,9 @@
       },
       "homebrew/core": {
         "revision": "6253df2098917078184ca280a1d1585f6594d308"
+      },
+      "homebrew/cask": {
+        "revision": "75b2ce8c77e46f6856a2a463e078a6d67f68fce1"
       }
     },
     "cask": {
@@ -22,7 +25,7 @@
         }
       },
       "alfred": {
-        "version": "4.0.9_1144",
+        "version": "4.1_1167",
         "options": {
           "full_name": "alfred"
         }
@@ -70,7 +73,7 @@
         }
       },
       "firefox": {
-        "version": "78.0.1",
+        "version": "78.0.2",
         "options": {
           "full_name": "firefox"
         }
@@ -142,7 +145,7 @@
         }
       },
       "opera": {
-        "version": "69.0.3686.36",
+        "version": "69.0.3686.57",
         "options": {
           "full_name": "opera"
         }
@@ -166,7 +169,7 @@
         }
       },
       "skype": {
-        "version": "8.61.0.95",
+        "version": "8.62.0.85",
         "options": {
           "full_name": "skype"
         }
@@ -214,9 +217,15 @@
         }
       },
       "visual-studio-code": {
-        "version": "1.46.1",
+        "version": "1.47.0",
         "options": {
           "full_name": "visual-studio-code"
+        }
+      },
+      "karabiner-elements": {
+        "version": "12.10.0",
+        "options": {
+          "full_name": "karabiner-elements"
         }
       }
     },
@@ -700,11 +709,6 @@
               "sha256": "9ce075b1ff714f828747d6b564d95c85d269795b75bbcd6129bd3628ea596b60"
             }
           }
-        },
-        "options": {
-          "args": [
-            "with-librsvg"
-          ]
         }
       },
       "jpeg": {
@@ -1050,10 +1054,7 @@
           }
         }
       },
-      "openssl": {
-        "version": "1.0.2s",
-        "bottle": null
-      },
+      "openssl": null,
       "pandoc": {
         "version": "2.9.2.1",
         "bottle": {
@@ -1269,13 +1270,6 @@
               "sha256": "b34c34f41e31e6a9d7021de5e3e380ef183605bfb8908cdb3d9e2bcd1eebe4be"
             }
           }
-        },
-        "options": {
-          "args": [
-            "HEAD",
-            "with-lua",
-            "with-python3"
-          ]
         }
       }
     },
