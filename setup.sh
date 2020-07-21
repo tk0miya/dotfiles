@@ -1,9 +1,9 @@
 #!/bin/sh
 
 if [ `hostname` = "deneb.local" -o `hostname` = "Alrescha.local" ]; then
-    REGULAR_PYTHON_VERSIONS="3.8.3 3.7.8 3.6.11 3.5.8 3.9-dev 3.10-dev"
+    REGULAR_PYTHON_VERSIONS="3.8.4 3.7.8 3.6.11 3.5.8 3.9-dev 3.10-dev"
 else
-    REGULAR_PYTHON_VERSIONS="3.8.3"
+    REGULAR_PYTHON_VERSIONS="3.8.4"
 fi
 
 mkdir -p $HOME/bin
