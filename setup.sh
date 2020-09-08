@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ `hostname` = "tarf.local" -o `hostname` = "Alrescha.local" ]; then
-    REGULAR_PYTHON_VERSIONS="3.8.5 3.7.8 3.6.11 3.5.8 3.9-dev 3.10-dev"
+    REGULAR_PYTHON_VERSIONS="3.8.5 3.7.9 3.6.12 3.5.10 3.9-dev 3.10-dev"
 else
     REGULAR_PYTHON_VERSIONS="3.8.5"
 fi
