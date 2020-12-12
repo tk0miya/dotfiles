@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ `hostname` = "deneb.local" -o `hostname` = "Alrescha.local" ]; then
+if [ `hostname` = "tarf.local" -o `hostname` = "Alrescha.local" ]; then
     REGULAR_PYTHON_VERSIONS="3.9.0 3.8.6 3.7.9 3.6.12 3.5.10 3.10-dev"
 else
     REGULAR_PYTHON_VERSIONS="3.9.0"
