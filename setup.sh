@@ -141,10 +141,7 @@ ndenv global v10.15.1
 echo ""
 echo "Setup python environments ..."
 pip install --upgrade setuptools
-pip install --upgrade pip babel flake8 diff-highlight wheel docutils docutils-stubs requests mypy tox transifex-client twine pynvim neovim
-# sshuttle-1.0 has been broken now...
-# Use sshuttle 0.78.6 + hyphen patch for a while.
-pip install --upgrade git+https://github.com/sshuttle/sshuttle@4372c6c11739eb479ffb74f933699960686c9408
+pip install --upgrade pip babel flake8 diff-highlight wheel docutils docutils-stubs requests mypy tox transifex-client twine pynvim neovim sshuttle
 
 echo ""
 echo "Setup hg extensions ..."
