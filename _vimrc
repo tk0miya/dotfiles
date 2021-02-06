@@ -75,6 +75,9 @@ noremap k gk
 " - Enable C-a, C-e (like Emacs)
 nnoremap <C-a> ^
 nnoremap <C-e> $
+" - Disable help (for TouchBar of MBP)
+nmap <F1> <nop>
+imap <F1> <nop>
 " - quickfix
 nnoremap <silent> <C-n> :cnext<CR>
 nnoremap <silent> <C-p> :cprevious<CR>
