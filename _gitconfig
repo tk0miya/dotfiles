@@ -31,7 +31,7 @@
 	st = status
 [includeIf "gitdir:~/work/tim/"]
 	path = .git/tim.config
-[includeIf "gitdir:~/work/tim/ash"]
+[includeIf "gitdir:~/work/tim/ash/"]
 	path = .git/tim.github.config
 [includeIf "gitdir:~/work/tim/nh4/"]
 	path = .git/nh4.config
