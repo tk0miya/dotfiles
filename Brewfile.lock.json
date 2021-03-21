@@ -233,6 +233,12 @@
         "options": {
           "full_name": "soundflower"
         }
+      },
+      "skitch": {
+        "version": "2.9,265157",
+        "options": {
+          "full_name": "skitch"
+        }
       }
     },
     "brew": {
