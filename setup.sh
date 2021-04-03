@@ -1,9 +1,9 @@
 #!/bin/sh
 
 if [ `hostname` = "tarf.local" -o `hostname` = "Alrescha.local" ]; then
-    REGULAR_PYTHON_VERSIONS="3.9.2 3.8.8 3.7.10 3.6.13 3.5.10 3.10-dev"
+    REGULAR_PYTHON_VERSIONS="3.9.3 3.8.9 3.7.10 3.6.13 3.5.10 3.10-dev"
 else
-    REGULAR_PYTHON_VERSIONS="3.9.2"
+    REGULAR_PYTHON_VERSIONS="3.9.3"
 fi
 
 mkdir -p $HOME/bin
