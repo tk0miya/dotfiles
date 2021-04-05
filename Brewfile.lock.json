@@ -11,10 +11,10 @@
         "revision": "c4cf96857c050dfa4f65f52109862dc68e55f60a"
       },
       "homebrew/core": {
-        "revision": "6e7b95727a5cd227e899c6a7a86cad9ebe76285a"
+        "revision": "5ee421fa0ab19225160537a24835e150dd77b8b1"
       },
       "homebrew/cask": {
-        "revision": "9a61f2ab0784e2016bda9c87aedd2ad769ec54ac"
+        "revision": "99bf1cede506dac9e3a1800543f7796defd0b37d"
       }
     },
     "cask": {
@@ -145,7 +145,7 @@
         }
       },
       "opera": {
-        "version": "75.0.3969.93",
+        "version": "75.0.3969.149",
         "options": {
           "full_name": "opera"
         }
@@ -223,7 +223,7 @@
         }
       },
       "karabiner-elements": {
-        "version": "13.3.0",
+        "version": "13.4.0",
         "options": {
           "full_name": "karabiner-elements"
         }
@@ -1636,10 +1636,10 @@
   "system": {
     "macos": {
       "catalina": {
-        "HOMEBREW_VERSION": "3.0.10",
+        "HOMEBREW_VERSION": "3.0.11",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "6e7b95727a5cd227e899c6a7a86cad9ebe76285a",
-        "CLT": "1103.0.32.59",
+        "Homebrew/homebrew-core": "5ee421fa0ab19225160537a24835e150dd77b8b1",
+        "CLT": "11.3.0.32.59",
         "Xcode": "11.5",
         "macOS": "10.15.7"
       }
