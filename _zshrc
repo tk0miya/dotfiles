@@ -35,7 +35,7 @@ if [ -d $HOME/.rbenv ]; then
 fi
 
 if [ -d $HOME/.pyenv ]; then
-    eval "$(pyenv init - --no-rehash)"
+    eval "$(pyenv init --path)"
 fi
 
 if [ -d $HOME/.plenv ]; then
