@@ -83,10 +83,6 @@ nnoremap <silent> <C-n> :cnext<CR>
 nnoremap <silent> <C-p> :cprevious<CR>
 " - turn off highlights
 nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
-" - choice from neocomplete or send <CR>
-inoremap <silent> <CR> <C-r>=<SID>choice_from_neocomplete()<CR>
-" - switch a choice of neocomplete
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " - Do centering after search
 nmap n nzz
 nmap N Nzz
@@ -154,8 +150,3 @@ augroup vimrc
   " Jump to last position on the file
   autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 augroup END
-
-" For neocomplete
-function! s:choice_from_neocomplete()
-  return pumvisible() ? neocomplete#close_popup() : "\<CR>"
-endfunction

@@ -73,27 +73,15 @@ repo = 'halkn/lightline-lsp'
 
 # Auto completion
 [[plugins]]
-repo = 'Shougo/neocomplete.vim'
-hook_add = '''
-  let g:neocomplete#enable_at_startup = 1             " Enable neocomplete at startup
-  let g:neocomplete#enable_smart_case = 1             " Case sensitive search if pattern contains CAPITAL chars
-  let g:neocomplete#enable_auto_close_preview = 1     " Close preview automatically
-  if !exists('g:neocomplete#force_omni_input_patterns')
-    let g:neocomplete#force_omni_input_patterns = {}
-  endif
-'''
+repo = 'prabirshrestha/asyncomplete.vim'
 
-# Auto completion for golang
+# Auto completion for LSP
 [[plugins]]
-repo = 'vim-jp/vim-go-extra'
+repo = 'prabirshrestha/asyncomplete-lsp.vim'
 
 # Ruby development helper
 #[[plugins]]
 #repo = 'marcus/rsense'
-
-# rsense plugin for neocomplete
-#[[plugins]]
-#repo = 'supermomonga/neocomplete-rsense.vim'
 
 # Auto complete 'end' keyword (in Ruby)
 [[plugins]]
