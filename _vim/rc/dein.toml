@@ -30,13 +30,46 @@ repo = 'Shougo/neomru.vim'
 [[plugins]]
 repo = 'szw/vim-tags'
 
-# Lint with flake8
-[[plugins]]
-repo = 'alfredodeza/khuno.vim'
-
 # PEP8 based auto indentation
 [[plugins]]
 repo = 'hynek/vim-python-pep8-indent'
+
+# LSP (Language Server Protocol)
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+
+# LSP settings
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+hook_add = '''
+  " Hide signcolumn.
+  let g:lsp_diagnostics_signs_enabled = 0
+  " Show diagnostics message to status line
+  let g:lsp_diagnostics_echo_cursor = 1
+  " Enable flake8 and mypy
+  let g:lsp_settings = {
+  \  'pylsp-all': {
+  \    'workspace_config': {
+  \      'pylsp': {
+  \        'configurationSources': ['flake8'],
+  \        'plugins': {
+  \          'pylsp_mypy': {
+  \            'enabled': 1
+  \          }
+  \        }
+  \      }
+  \    }
+  \  }
+  \}
+'''
+hook_post_source = '''
+  " Highlight LSP warnings strongly (like errors)
+  highlight link LspWarningHighlight Error
+'''
+
+# LSP-lightline bridge
+[[plugins]]
+repo = 'halkn/lightline-lsp'
 
 # Auto completion
 [[plugins]]
@@ -86,16 +119,16 @@ hook_add = '''
   \  'mode_map': {'c': 'NORMAL'},
   \  'active': {
   \    'right': [
-  \      [ 'linter_errors', 'linter_warnings' ],
+  \      [ 'lsp_errors', 'lsp_warnings' ],
   \    ]
   \  },
   \  'component_expand': {
-  \    'linter_warnings': 'lightline#ale#warnings',
-  \    'linter_errors': 'lightline#ale#errors',
+  \    'lsp_warnings': 'lightline_lsp#warnings',
+  \    'lsp_errors':   'lightline_lsp#errors',
   \  },
   \  'component_type': {
-  \    'linter_warnings': 'warning',
-  \    'linter_errors': 'errors',
+  \    'lsp_warnings': 'warning',
+  \    'lsp_errors':   'errors',
   \  },
   \}
 '''
@@ -107,17 +140,6 @@ repo = 'nanotech/jellybeans.vim'
 # Colorscheme
 [[plugins]]
 repo = 'w0ng/vim-hybrid'
-
-# Asynchronous Lint Engine
-[[plugins]]
-repo = 'w0rp/ale'
-hook_add = '''
-let g:ale_set_signs = 0         " Disable sign column
-'''
-
-# ALE indicator for lightline
-[[plugins]]
-repo = 'maximbaz/lightline-ale'
 
 # Highlights quickfix errors
 [[plugins]]
