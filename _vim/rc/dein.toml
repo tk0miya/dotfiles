@@ -79,10 +79,6 @@ repo = 'prabirshrestha/asyncomplete.vim'
 [[plugins]]
 repo = 'prabirshrestha/asyncomplete-lsp.vim'
 
-# Ruby development helper
-#[[plugins]]
-#repo = 'marcus/rsense'
-
 # Auto complete 'end' keyword (in Ruby)
 [[plugins]]
 repo = 'tpope/vim-endwise'
