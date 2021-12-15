@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ `hostname` = "tarf.local" -o `hostname` = "Alrescha.local" ]; then
-    REGULAR_PYTHON_VERSIONS="3.10.0 3.9.8 3.8.12 3.7.12 3.6.15 3.11-dev"
+    REGULAR_PYTHON_VERSIONS="3.10.0 3.9.9 3.8.12 3.7.12 3.6.15 3.11-dev"
 else
     REGULAR_PYTHON_VERSIONS="3.10.0"
 fi
@@ -131,12 +131,12 @@ ln -sF $PWD/lib/ndenv/plugins/node-build _ndenv/plugins
 
 PATH=$HOME/.ndenv/bin:$PATH
 eval "$(ndenv init -)"
-for version in v10.15.1; do
+for version in v16.13.1; do
     if [ ! -d "$HOME/.ndenv/versions/$version" ]; then
         ndenv install $version
     fi
 done
-ndenv global v10.15.1
+ndenv global v16.13.1
 
 echo ""
 echo "Setup python environments ..."
