@@ -19,6 +19,7 @@
 	branch = cat
 [init]
 	templatedir = ~/.git_template
+	defaultBranch = main
 [diff]
 	compactionHeuristic = true
 [rebase]
