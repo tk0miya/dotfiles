@@ -78,7 +78,11 @@ setopt share_history            # Share history with zsh proceses
 # Aliases
 alias ls='ls -F'
 alias vi='vim'
-eval "$(hub alias -s)"  # replace `git` by `hub` command
+
+# replace `git` by `hub` command (if installed)
+if command -v hub &> /dev/null; then
+    eval "$(hub alias -s)"
+fi
 
 if [ `uname -s` = "Darwin" ]; then
     alias top='top -s1 -o cpu -R -F'
@@ -115,4 +119,6 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # known_hosts completion
-_cache_hosts=(alrescha fomalhaut capella $(fgrep 'Host ' ~/.ssh/config | grep -v '*' | grep -v '^#' | awk '{print $2}' | sort))
+if [ -f $HOME/.ssh/config ]; then
+    _cache_hosts=(alrescha fomalhaut capella $(fgrep 'Host ' ~/.ssh/config | grep -v '*' | grep -v '^#' | awk '{print $2}' | sort))
+fi
