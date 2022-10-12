@@ -16,6 +16,10 @@ git submodule foreach git checkout master
 git submodule foreach git pull
 
 echo ""
+echo "Setup \$HOME/bin ..."
+ln -s $PWD/bin $HOME/bin
+
+echo ""
 echo "Setup vim extensions ..."
 vim -N -u $HOME/.vimrc -c 'call dein#update()' -c 'qall!' -U NONE -i NONE -V1 -e -s
 
