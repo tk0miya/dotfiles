@@ -20,10 +20,6 @@ echo "Setup \$HOME/bin ..."
 ln -s $PWD/bin $HOME/bin
 
 echo ""
-echo "Setup vim extensions ..."
-vim -N -u $HOME/.vimrc -c 'call dein#update()' -c 'qall!' -U NONE -i NONE -V1 -e -s
-
-echo ""
 echo "Creating dotfile symlinks ..."
 for dotfile in _?*
 do
@@ -39,4 +35,8 @@ do
         fi
     fi
 done
+
+echo ""
+echo "Setup vim extensions ..."
+vim -N -u $HOME/.vimrc -c 'call dein#update()' -c 'qall!' -U NONE -i NONE -V1 -e -s
 
