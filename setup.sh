@@ -26,6 +26,8 @@ if [ `uname -s` = "Darwin" ]; then
     brew cask cleanup
     PATH=/usr/local/bin:$PATH
 
+    cp /usr/local/share/git-core/contrib/diff-highlight/diff-highlight $HOME/bin
+
     echo ""
     echo "Setup fonts ..."
     if [ ! -e "$HOME/Library/Fonts/Monaco for Powerline.otf" ]; then
@@ -141,7 +143,7 @@ ndenv global v16.13.1
 echo ""
 echo "Setup python environments ..."
 pip install --upgrade setuptools
-pip install --upgrade pip babel flake8 diff-highlight wheel docutils docutils-stubs requests mypy tox transifex-client twine pynvim neovim sshuttle types-pkg-resources types-requests types-typed-ast
+pip install --upgrade pip babel flake8 wheel docutils docutils-stubs requests mypy tox transifex-client twine pynvim neovim sshuttle types-pkg-resources types-requests types-typed-ast
 
 echo ""
 echo "Setup hg extensions ..."
