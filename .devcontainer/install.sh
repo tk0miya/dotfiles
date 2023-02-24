@@ -13,12 +13,6 @@ if ! type diff-highlight > /dev/null 2>&1 ; then
 fi
 
 echo ""
-echo "Setup submodules ..."
-git submodule update --init
-git submodule foreach git checkout master
-git submodule foreach git pull
-
-echo ""
 echo "Setup \$HOME/bin ..."
 ln -s $PWD/bin $HOME/bin
 
