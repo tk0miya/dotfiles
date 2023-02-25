@@ -41,6 +41,10 @@ if [ `uname -s` = "Darwin" ]; then
         -e /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg ]; then
         sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
     fi
+
+    echo ""
+    echo "Setup VSCode (vim plugin) ..."
+    defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 elif [ -e '/etc/redhat-release' ]; then
     sudo yum install curl git screen vim
     curl -LO https://github.com/github/hub/releases/download/v2.11.1/hub-linux-amd64-2.11.1.tgz
