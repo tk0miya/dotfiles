@@ -30,19 +30,19 @@ case $TERM in
 esac
 
 # Setup *env
-if [ -d $HOME/.rbenv ]; then
+if type rbenv > /dev/null 2>&1 ; then
     eval "$(rbenv init - --no-rehash)"
 fi
 
-if [ -d $HOME/.pyenv ]; then
+if type pyenv > /dev/null 2>&1 ; then
     eval "$(pyenv init --path)"
 fi
 
-if [ -d $HOME/.plenv ]; then
+if type plenv > /dev/null 2>&1 ; then
     eval "$(plenv init - --no-rehash)"
 fi
 
-if [ -d $HOME/.ndenv ]; then
+if type ndenv > /dev/null 2>&1 ; then
     eval "$(ndenv init - --no-rehash)"
 fi
 
