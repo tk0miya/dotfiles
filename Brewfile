@@ -92,4 +92,4 @@ cask "visual-studio-code"
 cask "vlc"
 
 # packages on AppStore
-mas "Tweetbot", id: 557168941
+mas "Twitter", id: 1482454543
