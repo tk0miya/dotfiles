@@ -24,8 +24,8 @@ if [ ! -z $GIT_EMAIL ]; then
     echo ""
     echo "Setup .gitconfig ..."
     cp $PWD/_gitconfig $HOME/.gitconfig
-    echo '[user]' >> $HOME.gitconfig
-    echo '    email = ' $GIT_EMAIL >> $HOME.gitconfig
+    echo '[user]' >> $HOME/.gitconfig
+    echo '    email = ' $GIT_EMAIL >> $HOME/.gitconfig
 fi
 
 echo ""
