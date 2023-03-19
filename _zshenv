@@ -19,6 +19,7 @@ path=(
     /usr/bin(N-/)
     /usr/local/texlive/2017/bin/x86_64-darwin(N-/)
     /usr/local/texlive/2016/bin/x86_64-darwin(N-/)
+    /usr/share/doc/git/contrib/diff-highlight(N-/)
     /bin(N-/)
     /usr/sbin(N-/)
     /sbin(N-/)

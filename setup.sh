@@ -9,7 +9,9 @@ fi
 mkdir -p $HOME/bin
 mkdir -p $HOME/.pip/wheel
 
-if [ `uname -s` = "Darwin" ]; then
+if [ ! -z $CODESPACES ]; then
+    exec .github/install.sh
+elif [ `uname -s` = "Darwin" ]; then
     echo ""
     echo "Setup Homebrew ..."
     if [ -x /usr/local/bin/brew ]; then
