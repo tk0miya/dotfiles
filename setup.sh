@@ -133,18 +133,15 @@ done
 plenv global 5.23.9
 
 echo ""
-echo "Setup ndenv ..."
-mkdir -p _ndenv/plugins
-ln -sF $PWD/lib/ndenv/plugins/node-build _ndenv/plugins
-
-PATH=$HOME/.ndenv/bin:$PATH
-eval "$(ndenv init -)"
-for version in v16.19.1 v18.15.0; do
-    if [ ! -d "$HOME/.ndenv/versions/$version" ]; then
-        ndenv install $version
+echo "Setup nodenv ..."
+PATH=$HOME/.nodenv/bin:$PATH
+eval "$(nodenv init -)"
+for version in 16.20.0 18.16.0; do
+    if [ ! -d "$HOME/.nodenv/versions/$version" ]; then
+        nodenv install $version
     fi
 done
-ndenv global v18.15.0
+nodenv global 18.16.0
 
 echo ""
 echo "Setup python environments ..."

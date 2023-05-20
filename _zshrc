@@ -42,8 +42,8 @@ if type plenv > /dev/null 2>&1 ; then
     eval "$(plenv init - --no-rehash)"
 fi
 
-if type ndenv > /dev/null 2>&1 ; then
-    eval "$(ndenv init - --no-rehash)"
+if type nodenv > /dev/null 2>&1 ; then
+    eval "$(nodenv init - --no-rehash)"
 fi
 
 typeset -u path  # keep $PATH unique

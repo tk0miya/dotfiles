@@ -16,9 +16,6 @@
 [submodule "lib/plenv/plugins/perl-build"]
 	path = lib/plenv/plugins/perl-build
 	url = https://github.com/tokuhirom/Perl-Build
-[submodule "_ndenv"]
-	path = _ndenv
-	url = https://github.com/riywo/ndenv
 [submodule "lib/ndenv/plugins/node-build"]
 	path = lib/ndenv/plugins/node-build
 	url = https://github.com/riywo/node-build
