@@ -12,6 +12,7 @@ path=(
     $HOME/.nodenv/bin(N-/)
     $HOME/.nodenv/shims(N-/)
     $HOME/.golang/bin(N-/)
+    $HOME/.orbstack/bin(N-/)
     /usr/local/bin(N-/)
     /usr/local/opt/go/libexec/bin(N-/)
     /usr/pkg/bin(N-/)
