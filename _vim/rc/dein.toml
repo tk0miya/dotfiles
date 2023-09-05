@@ -26,10 +26,6 @@ repo = 'roxma/nvim-yarp'
 [[plugins]]
 repo = 'Shougo/neomru.vim'
 
-# Control ctags
-[[plugins]]
-repo = 'szw/vim-tags'
-
 # PEP8 based auto indentation
 [[plugins]]
 repo = 'hynek/vim-python-pep8-indent'
@@ -91,21 +87,9 @@ repo = 'prabirshrestha/asyncomplete.vim'
 [[plugins]]
 repo = 'prabirshrestha/asyncomplete-lsp.vim'
 
-# Auto complete 'end' keyword (in Ruby)
-[[plugins]]
-repo = 'tpope/vim-endwise'
-
 # Enhance increment/decrement feature
 [[plugins]]
 repo = 'nishigori/increment-activator'
-
-# Reference viewer
-[[plugins]]
-repo = 'thinca/vim-ref'
-
-# Ruby plugin for vim-ref
-[[plugins]]
-repo = 'yuku-t/vim-ref-ri'
 
 # Customize status line
 [[plugins]]
@@ -140,10 +124,6 @@ repo = 'w0ng/vim-hybrid'
 # Highlights quickfix errors
 [[plugins]]
 repo = 'cohama/vim-hier'
-
-# Utilities for Ruby on Rails
-[[plugins]]
-repo = 'tpope/vim-rails'
 
 # Syntax highlighting for markdown
 [[plugins]]
