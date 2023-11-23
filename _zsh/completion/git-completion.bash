@@ -28,7 +28,8 @@
 # completion style.  For example '!f() { : git commit ; ... }; f' will
 # tell the completion to use commit completion.  This also works with aliases
 # of form "!sh -c '...'".  For example, "!sh -c ': git commit ; ... '".
-# Be sure to add a space between the command name and the ';'.
+# Note that "git" is optional --- '!f() { : commit; ...}; f' would complete
+# just like the 'git commit' command.
 #
 # If you have a command that is not part of git, but you would still
 # like completion, you can use __git_complete:
@@ -1183,7 +1184,7 @@ __git_aliased_command ()
 			:)	: skip null command ;;
 			\'*)	: skip opening quote after sh -c ;;
 			*)
-				cur="$word"
+				cur="${word%;}"
 				break
 			esac
 		done
@@ -2052,7 +2053,7 @@ __git_log_shortlog_options="
 "
 # Options accepted by log and show
 __git_log_show_options="
-	--diff-merges --diff-merges= --no-diff-merges --remerge-diff
+	--diff-merges --diff-merges= --no-diff-merges --dd --remerge-diff
 "
 
 __git_diff_merges_opts="off none on first-parent 1 separate m combined c dense-combined cc remerge r"
