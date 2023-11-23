@@ -136,12 +136,12 @@ echo ""
 echo "Setup nodenv ..."
 PATH=$HOME/.nodenv/bin:$PATH
 eval "$(nodenv init -)"
-for version in 16.20.0 18.16.0; do
+for version in 16.20.2 18.18.0 20.7.0; do
     if [ ! -d "$HOME/.nodenv/versions/$version" ]; then
         nodenv install $version
     fi
 done
-nodenv global 18.16.0
+nodenv global 20.7.0
 
 echo ""
 echo "Setup python environments ..."
