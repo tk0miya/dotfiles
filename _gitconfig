@@ -18,7 +18,6 @@
 	diff = diff-highlight | less -+S
 	branch = cat
 [init]
-	templatedir = ~/.git_template
 	defaultBranch = main
 [diff]
 	compactionHeuristic = true
