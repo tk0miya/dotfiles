@@ -12,8 +12,7 @@ apt update
 apt install -y git jq less vim zsh
 
 if [ ! -e /usr/share/doc/git/contrib/diff-highlight/diff-highlight ]; then
-    cd /usr/share/doc/git/contrib/diff-highlight
-    make
+    (cd /usr/share/doc/git/contrib/diff-highlight; make)
 fi
 if [ ! -e /usr/local/bin/diff-highlight ]; then
     ln -s /usr/share/doc/git/contrib/diff-highlight/diff-highlight /usr/local/bin/diff-highlight
