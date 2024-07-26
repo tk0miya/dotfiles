@@ -96,12 +96,12 @@ ln -sF $PWD/lib/rbenv/plugins/rbenv-ctags _rbenv/plugins
 
 PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
-for version in 2.7.5 3.1.3; do
+for version in 2.7.5 3.1.6 3.2.4 3.3.2; do
     if [ ! -d "$HOME/.rbenv/versions/$version" ]; then
         rbenv install $version
     fi
 done
-rbenv global 3.1.3
+rbenv global 3.3.2
 gem install bundler ec2ssh gist refe2 rubocop
 gem update
 bitclust update
