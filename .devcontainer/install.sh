@@ -18,6 +18,12 @@ if [ ! -e /usr/local/bin/diff-highlight ]; then
     ln -s /usr/share/doc/git/contrib/diff-highlight/diff-highlight /usr/local/bin/diff-highlight
 fi
 
+if [ ! -e /usr/bin/pbcopy ]; then
+    curl -s -L https://github.com/tk0miya/rpbcopyd/releases/download/v1.0.0/rpbcopy-v1.0.0-`uname -m`-unknown-linux-musl -o /tmp/pbcopy
+    curl -s -L https://github.com/tk0miya/rpbcopyd/releases/download/v1.0.0/rpbpaste-v1.0.0-`uname -m`-unknown-linux-musl -o /tmp/pbpaste
+    sudo install -m 755 /tmp/pbcopy /tmp/pbpaste /usr/bin
+fi
+
 echo ""
 echo "Setup \$HOME/bin ..."
 ln -s $PWD/bin $HOME/bin
