@@ -27,4 +27,7 @@ path=(
     /usr/bin/X11(N-/)
     /usr/games(N-/)
 )
-. "$HOME/.cargo/env"
+
+if [ -e "$HOME/.cargo/env" ]; then
+  . "$HOME/.cargo/env"
+fi
