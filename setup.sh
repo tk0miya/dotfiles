@@ -1,9 +1,9 @@
 #!/bin/sh
 
 if [ `hostname` = "tarf.local" -o `hostname` = "Alrescha.local" ]; then
-    REGULAR_PYTHON_VERSIONS="3.12.1 3.11.7 3.10.13 3.9.18 3.8.18 3.7.17 3.6.15 3.13-dev"
+    REGULAR_PYTHON_VERSIONS="3.12.5 3.11.10 3.10.15 3.9.20 3.8.18 3.7.17 3.6.15 3.13-dev"
 else
-    REGULAR_PYTHON_VERSIONS="3.12.1"
+    REGULAR_PYTHON_VERSIONS="3.12.5"
 fi
 
 mkdir -p $HOME/bin
@@ -113,13 +113,13 @@ ln -sF $PWD/lib/plenv/plugins/perl-build _plenv/plugins
 
 PATH=$HOME/.plenv/bin:$PATH
 eval "$(plenv init -)"
-for version in 5.23.9; do
+for version in 5.40.0; do
     if [ ! -d "$HOME/.plenv/versions/$version" ]; then
         plenv install $version -Dusethreads
         plenv install-cpanm
     fi
 done
-plenv global 5.23.9
+plenv global 5.40.0
 
 echo ""
 echo "Setup nodenv ..."
@@ -136,14 +136,6 @@ echo ""
 echo "Setup python environments ..."
 pip install --upgrade setuptools
 pip install --upgrade pip babel flake8 wheel docutils docutils-stubs requests mypy tox transifex-client twine pynvim neovim sshuttle types-pkg-resources types-requests types-typed-ast
-
-echo ""
-echo "Setup hg extensions ..."
-if [ -d _hgext/hgbb ]; then
-    (cd _hgext/hgbb && hg update)
-else
-    (cd _hgext && hg clone https://bitbucket.org/seanfarley/hgbb)
-fi
 
 echo ""
 echo "Setup go environments ..."
