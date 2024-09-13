@@ -23,7 +23,6 @@ elif [ `uname -s` = "Darwin" ]; then
     brew bundle
     brew cu -a -y
     brew cleanup
-    brew cask cleanup
     PATH=/usr/local/bin:$PATH
 
     echo ""
