@@ -138,8 +138,7 @@ pip install --upgrade pip babel flake8 wheel docutils docutils-stubs requests my
 
 echo ""
 echo "Setup go environments ..."
-go get -u github.com/golang/lint/golint
-go get -u github.com/nsf/gocode
+go install golang.org/x/tools/gopls@latest
 
 echo ""
 echo "Setup misc scripts ..."
