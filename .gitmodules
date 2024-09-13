@@ -4,9 +4,6 @@
 [submodule "lib/rbenv/plugins/ruby-build"]
 	path = lib/rbenv/plugins/ruby-build
 	url = https://github.com/sstephenson/ruby-build
-[submodule "lib/rbenv/plugins/rbenv-ctags"]
-	path = lib/rbenv/plugins/rbenv-ctags
-	url = https://github.com/tpope/rbenv-ctags
 [submodule "_pyenv"]
 	path = _pyenv
 	url = https://github.com/yyuu/pyenv

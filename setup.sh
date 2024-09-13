@@ -80,7 +80,6 @@ echo ""
 echo "Setup rbenv ..."
 mkdir -p _rbenv/plugins
 ln -sF $PWD/lib/rbenv/plugins/ruby-build _rbenv/plugins
-ln -sF $PWD/lib/rbenv/plugins/rbenv-ctags _rbenv/plugins
 
 PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
