@@ -134,7 +134,7 @@ nodenv global 20.7.0
 echo ""
 echo "Setup python environments ..."
 pip install --upgrade setuptools
-pip install --upgrade pip babel flake8 wheel docutils docutils-stubs requests mypy tox transifex-client twine pynvim neovim sshuttle types-pkg-resources types-requests types-typed-ast
+pip install --upgrade pip babel flake8 wheel docutils docutils-stubs requests mypy tox transifex-client twine pynvim neovim types-pkg-resources types-requests types-typed-ast
 
 echo ""
 echo "Setup go environments ..."
