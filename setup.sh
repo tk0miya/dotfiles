@@ -28,8 +28,6 @@ elif [ `uname -s` = "Darwin" ]; then
     brew cask cleanup
     PATH=/usr/local/bin:$PATH
 
-    cp /usr/local/share/git-core/contrib/diff-highlight/diff-highlight $HOME/bin
-
     echo ""
     echo "Setup fonts ..."
     if [ ! -e "$HOME/Library/Fonts/Monaco for Powerline.otf" ]; then
