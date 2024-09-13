@@ -1,8 +1,6 @@
 # add repositories
 tap "buo/cask-upgrade"
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
 
 # packages
 cask "xquartz"
