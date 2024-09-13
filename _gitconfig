@@ -39,3 +39,5 @@
 	path = .git/tim.bitbucket.config
 [pull]
 	rebase = true
+[credential]
+	username = tk0miya
