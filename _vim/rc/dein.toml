@@ -26,17 +26,9 @@ repo = 'roxma/nvim-yarp'
 [[plugins]]
 repo = 'Shougo/neomru.vim'
 
-# PEP8 based auto indentation
-[[plugins]]
-repo = 'hynek/vim-python-pep8-indent'
-
 # Auto completion
 [[plugins]]
 repo = 'prabirshrestha/asyncomplete.vim'
-
-# Enhance increment/decrement feature
-[[plugins]]
-repo = 'nishigori/increment-activator'
 
 # Customize status line
 [[plugins]]
@@ -46,14 +38,6 @@ repo = 'itchyny/lightline.vim'
 [[plugins]]
 repo = 'nanotech/jellybeans.vim'
 
-# Colorscheme
-[[plugins]]
-repo = 'w0ng/vim-hybrid'
-
-# Highlights quickfix errors
-[[plugins]]
-repo = 'cohama/vim-hier'
-
 # Syntax highlighting for markdown
 [[plugins]]
 repo = 'rcmdnk/vim-markdown'
@@ -61,10 +45,6 @@ hook_add = '''
   " Disable auto folding for markdown files
   let g:vim_markdown_folding_disabled=1
 '''
-
-# Syntax highlighting for code-blocks in markdown
-[[plugins]]
-repo = 'joker1007/vim-markdown-quote-syntax'
 
 # Highlighting for CSV files
 [[plugins]]
