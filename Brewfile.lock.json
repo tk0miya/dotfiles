@@ -269,6 +269,12 @@
         "options": {
           "full_name": "postgresql"
         }
+      },
+      "synology-drive": {
+        "version": "3.5.1,16101",
+        "options": {
+          "full_name": "synology-drive"
+        }
       }
     },
     "brew": {
