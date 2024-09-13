@@ -34,13 +34,6 @@ elif [ `uname -s` = "Darwin" ]; then
     fi
 
     echo ""
-    echo "Setup additional headers (Mojave) ..."
-    if [ ! -e /usr/include/zlib.h && \
-        -e /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg ]; then
-        sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
-    fi
-
-    echo ""
     echo "Setup VSCode (vim plugin) ..."
     defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 elif [ -e '/etc/redhat-release' ]; then
