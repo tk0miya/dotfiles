@@ -100,7 +100,7 @@ for version in 2.7.5 3.1.6 3.2.4 3.3.2; do
     fi
 done
 rbenv global 3.3.2
-gem install bundler ec2ssh gist refe2 rubocop
+gem install bundler ec2ssh refe2 rubocop
 gem update
 bitclust update
 
