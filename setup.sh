@@ -92,7 +92,6 @@ done
 rbenv global 3.3.2
 gem install -N bundler ec2ssh rubocop
 gem update
-bitclust update
 
 echo ""
 echo "Setup pyenv ..."
