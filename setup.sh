@@ -106,21 +106,6 @@ done
 pyenv global $REGULAR_PYTHON_VERSIONS
 
 echo ""
-echo "Setup plenv ..."
-mkdir -p _plenv/plugins
-ln -sF $PWD/lib/plenv/plugins/perl-build _plenv/plugins
-
-PATH=$HOME/.plenv/bin:$PATH
-eval "$(plenv init -)"
-for version in 5.40.0; do
-    if [ ! -d "$HOME/.plenv/versions/$version" ]; then
-        plenv install $version -Dusethreads
-        plenv install-cpanm
-    fi
-done
-plenv global 5.40.0
-
-echo ""
 echo "Setup nodenv ..."
 PATH=$HOME/.nodenv/bin:$PATH
 eval "$(nodenv init -)"
