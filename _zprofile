@@ -1,0 +1,6 @@
+if type rbenv > /dev/null 2>&1 ; then
+    eval "$(rbenv init - --no-rehash)"
+fi
+
+# Added by OrbStack: command-line tools and integration
+source ~/.orbstack/shell/init.zsh 2>/dev/null || :
