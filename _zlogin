@@ -6,16 +6,10 @@ if [ -x /usr/bin/keychain ]; then
         exec screen -S main -xRR
     fi
 else
-    # For MacOSX
+    # For MacOS
     if [ -d /System ]; then
-        if [ -z $SSH_AUTH_SOCK ]; then
-            if [ -e $HOME/.ssh/auth_sock ]; then
-                export SSH_AUTH_SOCK=$HOME/.ssh/auth_sock
-            else
-                eval `ssh-agent -a $HOME/.ssh/auth_sock`
-                ssh-add ~/.ssh/id_rsa*(^R)
-            fi
-        fi
+        # In MacOS, ssh-agent will be automatically invoked.  Preparation is not needed at all.
+        # https://qiita.com/yuki153/items/0ad5cb02faf3ecdcf903
     else
         isAlive=`ps -xw | grep " ssh-agent "| grep -v grep | wc -l | sed -e 's/[^0-9]//g' `
         case ${isAlive} in
