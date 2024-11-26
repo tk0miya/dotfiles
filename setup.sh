@@ -83,12 +83,12 @@ ln -sF $PWD/lib/rbenv/plugins/ruby-build _rbenv/plugins
 
 PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
-for version in 2.7.7 3.1.6 3.2.5 3.3.5; do
+for version in 2.7.7 3.1.6 3.2.5 3.3.6; do
     if [ ! -d "$HOME/.rbenv/versions/$version" ]; then
         rbenv install $version
     fi
 done
-rbenv global 3.3.5
+rbenv global 3.3.6
 gem install -N bundler ec2ssh rubocop
 gem update
 
