@@ -1,6 +1,7 @@
 # add repositories
 tap "buo/cask-upgrade"
 tap "homebrew/bundle"
+tap "fujiwara/tap"
 
 # packages
 cask "xquartz"
@@ -10,6 +11,7 @@ brew "cabal-install"
 brew "cairo"
 brew "ctags"
 brew "docker-clean"
+brew "ecsta"
 brew "epubcheck"
 brew "ffmpeg"
 brew "fontconfig"
