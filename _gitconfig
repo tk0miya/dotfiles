@@ -41,3 +41,7 @@
 	rebase = true
 [credential]
 	username = tk0miya
+[fetch]
+	prune = true
+[commit]
+	verbose = true
