@@ -21,6 +21,10 @@
 	defaultBranch = main
 [diff]
 	compactionHeuristic = true
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
 [rebase]
 	autosquash = true
 [alias]
@@ -43,5 +47,17 @@
 	username = tk0miya
 [fetch]
 	prune = true
+	pruneTags = true
+	all = true
 [commit]
 	verbose = true
+[tag]
+	sort = version:refname
+[push]
+	autoSetupRemote = true
+	followTags = true
+[help]
+	autocorrect = prompt
+[rerere]
+	enabled = true
+	autoupdate = true
