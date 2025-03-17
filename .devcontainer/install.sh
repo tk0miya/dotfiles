@@ -34,6 +34,11 @@ if [ ! -z $GIT_EMAIL ]; then
     cp $PWD/_gitconfig $HOME/.gitconfig
     echo '[user]' >> $HOME/.gitconfig
     echo '    email = ' $GIT_EMAIL >> $HOME/.gitconfig
+
+    # bullseye does not support "autocorrect = prompt"
+    if grep bullseye /etc/os-release > /dev/null; then
+        sed -i -e 's/autocorrect = prompt/autocorrect = 1/' ~/.gitconfig
+    fi
 fi
 
 echo ""
