@@ -31,6 +31,7 @@
 	ci = commit
 	co = checkout
 	glog = log --graph
+	prune-branch = !git branch --merged | egrep -v 'main|master|develop|release' | xargs git branch -d
 [includeIf "gitdir:~/work/tim/"]
 	path = .git/tim.config
 [includeIf "gitdir:~/work/tim/ash/"]
