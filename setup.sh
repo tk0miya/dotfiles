@@ -89,7 +89,7 @@ for version in 3.1.6 3.2.5 3.3.6 3.4.1; do
     fi
 done
 rbenv global 3.4.1
-gem install -N bundler ec2ssh rubocop
+gem install -N bundler ec2ssh rbnacl rubocop
 gem update
 
 echo ""
@@ -127,5 +127,8 @@ echo ""
 echo "Setup misc scripts ..."
 curl -sS -L -o $HOME/bin/git-blame-pr https://gist.githubusercontent.com/kazuho/eab551e5527cb465847d6b0796d64a39/raw/0556a3c9f1c95aa630d6801c6d3e25865a6e18c5/git-blame-pr.pl
 chmod 755 $HOME/bin/git-blame-pr
-chmod 755 $HOME/bin/git-blame-pr
-ln -sF $PWD/bin/git-fixup $HOME/bin/git-fixup
+
+for file in bin/*
+do
+    ln -sF $PWD/${file} $HOME/${file}
+done
