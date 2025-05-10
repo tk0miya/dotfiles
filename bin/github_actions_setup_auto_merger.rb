@@ -21,6 +21,7 @@ def github_request(method, path, body = nil)
             when :get then Net::HTTP::Get.new(uri.path)
             when :post then Net::HTTP::Post.new(uri.path)
             when :put then Net::HTTP::Put.new(uri.path)
+            when :patch then Net::HTTP::Patch.new(uri.path)
             else raise "Unsupported HTTP method: #{method}"
             end
 
@@ -100,6 +101,21 @@ end
 
 def set_dependabot_secret(repo_name, name, value)
   set_secret(repo_name, "dependabot", name, value)
+end
+
+def enable_auto_merge(repo_name)
+  path = "/repos/#{repo_name}"
+  body = {
+    allow_auto_merge: true,
+    delete_branch_on_merge: true
+  }
+
+  status_code, response = github_request(:patch, path, body)
+  if status_code >= 400
+    raise "Failed to enable auto-merge: #{response["message"] if response}"
+  end
+
+  response
 end
 
 # Main execution related functions
@@ -191,6 +207,10 @@ def main
 
   validate_requirements(PRIVATE_KEY_PATH)
 
+  # Enable auto-merge feature
+  puts "Enabling auto-merge feature..."
+  enable_auto_merge(repo_name)
+
   # Set up Actions Variable
   puts "Setting up Actions Variable..."
   set_action_variable(repo_name, "PR_AUTO_MERGER_APP_ID", "1239986")
@@ -208,4 +228,3 @@ def main
 end
 
 main if $PROGRAM_NAME == __FILE__
-
