@@ -118,6 +118,17 @@ def enable_auto_merge(repo_name)
   response
 end
 
+def enable_dependabot_security_updates(repo_name)
+  path = "/repos/#{repo_name}/automated-security-fixes"
+
+  status_code, response = github_request(:put, path)
+  if status_code >= 400
+    raise "Failed to enable Dependabot security updates: #{response["message"] if response}"
+  end
+
+  response
+end
+
 # Main execution related functions
 def print_github_token_error
   puts "\e[31mError: GITHUB_TOKEN environment variable is not set.\e[0m"
@@ -210,6 +221,10 @@ def main
   # Enable auto-merge feature
   puts "Enabling auto-merge feature..."
   enable_auto_merge(repo_name)
+
+  # Enable Dependabot security updates
+  puts "Enabling Dependabot security updates..."
+  enable_dependabot_security_updates(repo_name)
 
   # Set up Actions Variable
   puts "Setting up Actions Variable..."
