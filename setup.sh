@@ -104,17 +104,6 @@ done
 pyenv global $REGULAR_PYTHON_VERSIONS
 
 echo ""
-echo "Setup nodenv ..."
-PATH=$HOME/.nodenv/bin:$PATH
-eval "$(nodenv init -)"
-for version in 16.20.2 18.18.0 20.7.0; do
-    if [ ! -d "$HOME/.nodenv/versions/$version" ]; then
-        nodenv install $version
-    fi
-done
-nodenv global 20.7.0
-
-echo ""
 echo "Setup python environments ..."
 pip install --upgrade setuptools
 pip install --upgrade pip babel flake8 wheel docutils docutils-stubs requests mypy tox transifex-client twine pynvim neovim types-requests types-typed-ast
