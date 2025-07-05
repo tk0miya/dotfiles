@@ -58,7 +58,7 @@
 	autoSetupRemote = true
 	followTags = true
 [help]
-	autocorrect = prompt
+	autocorrect = 1
 [rerere]
 	enabled = true
 	autoupdate = true
