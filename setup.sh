@@ -109,6 +109,11 @@ pip install --upgrade setuptools
 pip install --upgrade pip babel flake8 wheel docutils docutils-stubs requests mypy tox transifex-client twine pynvim neovim types-requests types-typed-ast
 
 echo ""
+echo "Setup Node.js environments ..."
+npm install -g @anthropic-ai/claude-code
+npm update -g
+
+echo ""
 echo "Setup go environments ..."
 go install golang.org/x/tools/gopls@latest
 
