@@ -19,6 +19,7 @@ path=(
     /usr/share/doc/git/contrib/diff-highlight(N-/)
     /usr/local/share/git-core/contrib/diff-highlight(N-/)
     /opt/local/share/git-core/contrib/diff-highlight(N-/)
+    /opt/homebrew/share/git-core/contrib/diff-highlight(N-/)
     /bin(N-/)
     /usr/sbin(N-/)
     /sbin(N-/)
