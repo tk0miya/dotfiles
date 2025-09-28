@@ -46,7 +46,6 @@ cask "slack"
 cask "synology-drive"
 cask "tailscale"
 cask "the-unarchiver"
-cask "visual-studio-code"
 cask "vlc"
 
 # packages on AppStore
