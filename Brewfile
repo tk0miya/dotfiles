@@ -50,3 +50,4 @@ cask "vlc"
 
 # packages on AppStore
 mas "Twitter", id: 1482454543
+mas "WireGuard", id: 1451685025
