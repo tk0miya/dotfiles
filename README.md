@@ -21,4 +21,4 @@ $ sh setup.sh
 iTerm2
 ------
 
-In `[Preferences] > [General]`, put `/path/to/.iTerm2` to custom folder for preferences
+In `[Settings] > [General] > [Settings]`, put `/path/to/dotfiles/_iTerm2` to "External settings" folder
