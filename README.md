@@ -21,4 +21,5 @@ $ sh setup.sh
 iTerm2
 ------
 
-In `[Settings] > [General] > [Settings]`, put `/path/to/dotfiles/_iTerm2` to "External settings" folder
+1. On the old machine, Run "Export All Settings and Data" at `[Settings] > [General] > [Settings]`.
+2. On the new machine, Run "Import All Settings and Data" at `[Settings] > [General] > [settings]`.
