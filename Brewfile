@@ -30,6 +30,7 @@ brew "vim"
 
 # cask packages
 cask "appcleaner"
+cask "aws-vault"
 cask "chrome-remote-desktop-host"
 cask "clamxav"
 cask "discord"
