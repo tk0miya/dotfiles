@@ -14,8 +14,8 @@ if [ ! -z $CODESPACES ]; then
 elif [ `uname -s` = "Darwin" ]; then
     echo ""
     echo "Setup Homebrew ..."
-    if [ ! -x /usr/local/bin/brew ]; then
-        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    if [ ! -x /opt/homebrew/bin/brew ]; then
+        bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     fi
 
     brew update

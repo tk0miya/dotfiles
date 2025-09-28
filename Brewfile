@@ -1,6 +1,5 @@
 # add repositories
 tap "buo/cask-upgrade"
-tap "homebrew/bundle"
 tap "fujiwara/tap"
 
 # packages
