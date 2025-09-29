@@ -47,6 +47,7 @@ cask "synology-drive"
 cask "tailscale"
 cask "the-unarchiver"
 cask "vlc"
+cask "zoom"
 
 # packages on AppStore
 mas "Twitter", id: 1482454543
