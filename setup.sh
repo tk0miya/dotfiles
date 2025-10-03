@@ -79,7 +79,7 @@ vim -N -u $HOME/.vimrc -c 'call dein#update()' -c 'qall!' -U NONE -i NONE -V1 -e
 echo ""
 echo "Setup rbenv ..."
 mkdir -p _rbenv/plugins
-ln -sF $PWD/lib/rbenv/plugins/ruby-build _rbenv/plugins
+ln -sF $PWD/lib/rbenv/plugins/ruby-build _rbenv/plugins/
 
 PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
