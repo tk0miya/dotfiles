@@ -52,5 +52,5 @@ cask "zoom"
 
 # packages on AppStore
 mas "Skitch", id: 425955336
-mas "Twitter", id: 1482454543
+#mas "Twitter", id: 1482454543
 mas "WireGuard", id: 1451685025
