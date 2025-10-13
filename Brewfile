@@ -43,7 +43,6 @@ cask "microsoft-teams"
 cask "postman"
 cask "rectangle"
 cask "session-manager-plugin"  # AWS CLI Plugin
-cask "skitch"
 cask "slack"
 cask "synology-drive"
 cask "tailscale"
