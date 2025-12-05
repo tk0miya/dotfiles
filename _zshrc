@@ -123,14 +123,3 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 if [ -f $HOME/.ssh/config ]; then
     _cache_hosts=(alrescha fomalhaut capella $(fgrep 'Host ' ~/.ssh/config | grep -v '*' | grep -v '^#' | awk '{print $2}' | sort))
 fi
-
-# widgets
-if command -v peco > /dev/null; then
-    function peco-select-history() {
-        BUFFER=$(\history -n -r 1 | peco --query "$LBUFFER")
-        CURSOR=$#BUFFER
-        zle clear-screen
-    }
-    zle -N peco-select-history
-    bindkey '^r' peco-select-history
-fi
