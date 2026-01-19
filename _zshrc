@@ -80,10 +80,6 @@ setopt share_history            # Share history with zsh proceses
 alias ls='ls -F'
 alias vi='vim'
 
-# replace `git` by `hub` command (if installed)
-if command -v hub &> /dev/null; then
-    eval "$(hub alias -s)"
-fi
 
 if [ `uname -s` = "Darwin" ]; then
     alias top='top -s1 -o cpu -R -F'
