@@ -39,6 +39,7 @@ cask "microsoft-teams"
 cask "postman"
 cask "rectangle"
 cask "session-manager-plugin"  # AWS CLI Plugin
+cask "shottr"
 cask "slack"
 cask "synology-drive"
 cask "tailscale"
@@ -47,6 +48,5 @@ cask "vlc"
 cask "zoom"
 
 # packages on AppStore
-mas "Skitch", id: 425955336
 #mas "Twitter", id: 1482454543
 mas "WireGuard", id: 1451685025
