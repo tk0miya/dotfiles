@@ -9,6 +9,7 @@ path=(
     $HOME/.pyenv/shims(N-/)
     $HOME/.golang/bin(N-/)
     $HOME/.orbstack/bin(N-/)
+    $HOME/.local/bin(N-/)
     /usr/local/bin(N-/)
     /usr/local/opt/go/libexec/bin(N-/)
     /usr/pkg/bin(N-/)
