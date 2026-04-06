@@ -44,7 +44,7 @@ fi
 
 typeset -u path  # keep $PATH unique
 
-fpath=($HOME/.zsh/completion $fpath)
+fpath=($HOME/.zsh/zsh-completions/src $fpath)
 
 export EDITOR=vim
 export PIP_FIND_LINKS=$HOME/.pip/wheel
