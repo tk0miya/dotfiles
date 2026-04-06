@@ -92,9 +92,12 @@ bindkey "\e[Z" reverse-menu-complete
 autoload -Uz compinit
 compinit -C
 
+# extensions
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 if [ -x /usr/bin/dircolors ]; then
     eval "$(dircolors -b)"
-fi 
+fi
 
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
