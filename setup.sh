@@ -81,11 +81,6 @@ gem install -N bundler ec2ssh rbnacl rubocop
 gem update
 
 echo ""
-echo "Setup Node.js environments ..."
-npm install -g @anthropic-ai/claude-code
-npm update -g
-
-echo ""
 echo "Setup go environments ..."
 go install golang.org/x/tools/gopls@latest
 
