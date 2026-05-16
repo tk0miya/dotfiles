@@ -1,11 +1,5 @@
 #!/bin/sh
 
-if [ `hostname` = "tarf.localdomain" -o `hostname` = "Alrescha.local" ]; then
-    REGULAR_PYTHON_VERSIONS="3.12.5 3.11.10 3.10.15 3.9.20"
-else
-    REGULAR_PYTHON_VERSIONS="3.12.5"
-fi
-
 mkdir -p $HOME/bin
 mkdir -p $HOME/.pip/wheel
 
@@ -85,22 +79,6 @@ done
 rbenv global 4.0.4
 gem install -N bundler ec2ssh rbnacl rubocop
 gem update
-
-echo ""
-echo "Setup pyenv ..."
-PATH=$HOME/.pyenv/bin:$PATH
-eval "$(pyenv init -)"
-for version in $REGULAR_PYTHON_VERSIONS; do
-    if [ ! -d "$HOME/.pyenv/versions/$version" ]; then
-        pyenv install $version
-    fi
-done
-pyenv global $REGULAR_PYTHON_VERSIONS
-
-echo ""
-echo "Setup python environments ..."
-pip install --upgrade setuptools
-pip install --upgrade pip babel flake8 wheel docutils docutils-stubs requests mypy tox transifex-client twine pynvim neovim types-requests types-typed-ast
 
 echo ""
 echo "Setup Node.js environments ..."

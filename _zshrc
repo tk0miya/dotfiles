@@ -34,10 +34,6 @@ if type rbenv > /dev/null 2>&1 ; then
     eval "$(rbenv init - --no-rehash)"
 fi
 
-if type pyenv > /dev/null 2>&1 ; then
-    eval "$(pyenv init --path)"
-fi
-
 if type plenv > /dev/null 2>&1 ; then
     eval "$(plenv init - --no-rehash)"
 fi

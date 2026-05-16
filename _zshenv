@@ -5,8 +5,6 @@ path=(
     $HOME/.rbenv/bin(N-/)
     $HOME/.rbenv/shims(N-/)
     $HOME/.rvm/bin(N-/)
-    $HOME/.pyenv/bin(N-/)
-    $HOME/.pyenv/shims(N-/)
     $HOME/.golang/bin(N-/)
     $HOME/.orbstack/bin(N-/)
     $HOME/.local/bin(N-/)
