@@ -71,12 +71,12 @@ ln -sF $PWD/lib/rbenv/plugins/ruby-build _rbenv/plugins/
 
 PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
-for version in 3.3.11 3.4.9 4.0.4; do
+for version in 3.3.11 3.4.10 4.0.5; do
     if [ ! -d "$HOME/.rbenv/versions/$version" ]; then
         rbenv install $version
     fi
 done
-rbenv global 4.0.4
+rbenv global 4.0.5
 gem install -N bundler ec2ssh rbnacl rubocop
 gem update
 
