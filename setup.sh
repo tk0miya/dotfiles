@@ -62,7 +62,6 @@ done
 
 for config in $(find config -type f)
 do
-    echo $config
     filename=$HOME/.$config
     if [ -L $filename ]; then
         echo "here"
@@ -71,8 +70,8 @@ do
         echo "Ignore $filename (already exists)"
     else
         echo "Creating $filename ..."
-        mkdir -p $(filename)
-        ln -s "$PWD/config" "$filename"
+        mkdir -p $(dirname filename)
+        ln -s "$PWD/$config" "$filename"
     fi
 done
 
