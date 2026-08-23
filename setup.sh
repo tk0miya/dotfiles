@@ -60,6 +60,22 @@ do
     fi
 done
 
+for config in $(find config -type f)
+do
+    echo $config
+    filename=$HOME/.$config
+    if [ -L $filename ]; then
+        echo "here"
+        cat /dev/null  # noop
+    elif [ -e $filename ]; then
+        echo "Ignore $filename (already exists)"
+    else
+        echo "Creating $filename ..."
+        mkdir -p $(filename)
+        ln -s "$PWD/config" "$filename"
+    fi
+done
+
 echo ""
 echo "Setup vim extensions ..."
 vim -N -u $HOME/.vimrc -c 'call dein#update()' -c 'qall!' -U NONE -i NONE -V1 -e -s
