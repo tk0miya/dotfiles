@@ -5,6 +5,7 @@ tap "fujiwara/tap"
 # packages
 brew "ascii"
 brew "awscli"
+brew "docker-credential-helper-ecr"
 brew "ecsta"
 brew "gh"
 brew "gist"
