@@ -50,6 +50,7 @@ cask "rectangle"
 cask "session-manager-plugin"  # AWS CLI Plugin
 cask "shottr"
 cask "slack"
+cask "slack-cli"
 cask "synology-drive"
 cask "tailscale"
 cask "the-unarchiver"
