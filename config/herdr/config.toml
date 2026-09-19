@@ -1,3 +1,8 @@
 onboarding = false
 [keys]
 prefix = "ctrl+t"
+next_workspace = "prefix+ctrl+n"
+previous_workspace = "prefix+ctrl+p"
+
+[ui]
+agent_panel_sort = "spaces"
