@@ -86,7 +86,7 @@ ln -sF $PWD/lib/rbenv/plugins/ruby-build _rbenv/plugins/
 
 PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
-for version in 3.3.11 3.4.10 4.0.5; do
+for version in 3.3.13 3.4.12 4.0.9; do
     if [ ! -d "$HOME/.rbenv/versions/$version" ]; then
         rbenv install $version
     fi
